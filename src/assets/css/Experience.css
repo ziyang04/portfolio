@@ -1,0 +1,92 @@
+.experience-section {
+  padding-top: 3rem; /* Reduced from 7rem */
+  min-height: auto; /* Changed from 100vh */
+  background-color: var(--bg-primary);
+  width: 100%;
+}
+
+.vertical-timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 1000px; /* Match container width */
+  margin: 0 auto;
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.experience-content {
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.experience-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.experience-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.job-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.company {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.period, .location {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.experience-body p {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.responsibilities {
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: 80%;
+  list-style-position: inside;
+  text-align: center;
+}
+
+.responsibilities li {
+  margin-bottom: 8px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .responsibilities {
+    padding-left: 0;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,278 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 80px; /* Adjust based on navbar height */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  padding: 0; /* Changed from 50px 0 to remove all padding */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: auto; /* Changed from 100vh to auto to reduce spacing */
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility Classes */
+.section-padding {
+  padding: 80px 0;
+}
+
+.page-section {
+  margin-top: 56px;
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: #007bff;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Theme variables for light/dark mode */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --accent-color: #007bff;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --navbar-bg: #ffffff;
+  --navbar-text: #212529;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #121212;
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --accent-color: #0d6efd;
+  --border-color: #2d3236;
+  --card-bg: #121212;
+  --navbar-bg: #121212;
+  --navbar-text: #f8f9fa;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Component wrappers */
+.section-content {
+  width: 100%;
+  max-width: 1000px; /* Matching container width */
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px; /* Consistent width for all components */
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Ensure all Bootstrap columns are centered */
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-sm, .col-md, .col-lg, .col-xl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Make content inside columns properly aligned */
+.col p, .col-md p, .col-lg p, .col ul, .col-md ul, .col-lg ul, 
+.col li, .col-md li, .col-lg li {
+  text-align: center;
+  width: 100%;
+}
+
+/* Make sure images are centered */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* List items centering */
+ul, ol {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+/* Form controls centering */
+.form-control {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Button centering */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Table centering */
+table {
+  margin: 0 auto;
+}
+
+/* Fix for timeline items to be centered */
+.timeline-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* New class for consistent component width */
+.component-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Adjust section spacing */
+section + section {
+  margin-top: 0; /* Changed from -30px to 0 to remove negative margin */
+}
+
+/* Add this to ensure no unwanted margin/padding between sections */
+main > section {
+  margin: 0;
+}
