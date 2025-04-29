@@ -102,3 +102,4 @@ This project is open source and available under the MIT License.
 - Design inspired by modern portfolio trends
 - Built for computer science professionals to showcase their skills and experience
 # portfolio
+# portfolio
