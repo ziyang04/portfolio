@@ -42,6 +42,12 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 100%;
+  transition: all 0.3s ease;
+}
+
+.education-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .education-header {
@@ -70,6 +76,18 @@
   font-size: 0.9rem;
 }
 
+.education-body {
+  text-align: left;
+  padding: 0 5px;
+}
+
+.education-description {
+  font-style: italic;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
 .education-body h4 {
   font-size: 1.1rem;
   margin-top: 15px;
@@ -78,14 +96,45 @@
   color: var(--text-primary);
 }
 
-.courses {
+.courses, .highlights {
   padding-left: 20px;
   margin-bottom: 0;
+  list-style-position: outside;
+  text-align: left;
 }
 
-.courses li {
-  margin-bottom: 5px;
+.courses li, .highlights li {
+  margin-bottom: 10px;
   color: var(--text-secondary);
+  padding-left: 5px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.highlights li {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  padding: 8px 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--accent-color);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.highlights li:hover {
+  transform: translateX(3px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add highlights categories with different styling */
+.highlights li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.highlights li::marker {
+  color: var(--accent-color);
 }
 
 @media (max-width: 576px) {

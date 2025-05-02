@@ -45,6 +45,30 @@
   margin-bottom: 1.5rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   color: var(--text-secondary);
+  min-height: 2.2rem; /* To prevent layout shift while typing */
+}
+
+/* Typing text animation styles */
+.typing-text {
+  display: inline-block;
+  min-width: 10px;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 2px;
+  background-color: var(--text-secondary);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
 }
 
 .hero-buttons {

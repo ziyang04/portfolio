@@ -7,12 +7,22 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Food Catering Website',
-      description: 'A comprehensive web-based food catering platform that streamlined the event planning process by enabling users to effortlessly select customized menu options for large-scale occasions.',
-      image: 'project1.jpg',
+      title: 'Portfolio Website',
+      description: 'A website to showcase my creative journey as a junior software engineer, blending innovation and design to bring ideas to life',
+      image: require('../../assets/img/portfolio.png'), 
       category: 'web',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS'],
-      liveLink: '#',
+      liveLink: 'https://portfolio-5smz8x7qt-zi-yangs-projects-80f09863.vercel.app',
+      sourceLink: 'https://github.com/ziyang04/portfolio'
+    },
+    {
+      id: 2,
+      title: 'Food Catering Website',
+      description: 'A comprehensive web-based food catering platform that streamlined the event planning process by enabling users to effortlessly select customized menu options for large-scale occasions.',
+      image: require('../../assets/img/catering.png'), // Use require to reference the image
+      category: 'web',
+      technologies: ['React', 'JavaScript', 'HTML', 'CSS'],
+      liveLink: '',
       sourceLink: 'https://github.com/ziyang04/Catering-Website'
     }
     // Add more projects here as you develop them
@@ -54,14 +64,21 @@ const Projects = () => {
           {filteredProjects.map((project) => (
             <div className="project-card" key={project.id}>
               <div className="project-image">
-                {/* Use an actual image in production or keep placeholder */}
-                <div className="project-placeholder">
-                  <span>{project.title}</span>
-                </div>
+                {/* Display the actual project image */}
+                <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
                   <div className="project-links">
                     <a href={project.sourceLink} className="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">Source Code</a>
-                  </div>
+                    {project.liveLink && (
+                      <a
+                          href={project.liveLink}
+                          className="btn btn-sm btn-outline-light"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                      >
+                          Live Demo
+                      </a>
+                  )}</div>
                 </div>
               </div>
               <div className="project-info">

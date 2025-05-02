@@ -9,7 +9,7 @@ return (
         <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                    <p>© {new Date().getFullYear()} Your Name - All Rights Reserved</p>
+                    <p>© {new Date().getFullYear()} Zi Yang - All Rights Reserved</p>
                 </div>
                 <div className="col-md-6 text-end">
                     <div className="social-links">

@@ -11,6 +11,7 @@ import HomeAbout from './components/sections/HomeAbout';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
 import Experience from './components/sections/Experience';
+import Extracurricular from './components/sections/Extracurricular';
 import Education from './components/sections/Education';
 import Contact from './components/sections/Contact';
 
@@ -27,6 +28,9 @@ function App() {
         </section>
         <section id="experience">
           <Experience />
+        </section>
+        <section id="extracurricular">
+          <Extracurricular />
         </section>
         <section id="projects">
           <Projects />

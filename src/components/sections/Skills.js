@@ -4,28 +4,15 @@ import '../../assets/css/Skills.css';
 const Skills = () => {
   // Technical skills categorized
   const frontendSkills = [
-    { name: 'React', level: 90 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'HTML', level: 90 },
-    { name: 'CSS', level: 85 },
+    'React', 'JavaScript', 'TypeScript', 'HTML', 'CSS'
   ];
 
   const backendSkills = [
-    { name: 'Flask', level: 80 },
-    { name: '.NET', level: 75 },
-    { name: 'Python', level: 85 },
-    { name: 'C#', level: 80 },
-    { name: 'C++', level: 90 },
+    'Flask', '.NET', 'Python', 'C#', 'C++'
   ];
   
   const databaseSkills = [
-    { name: 'MySQL', level: 85 },
-    { name: 'SQLite', level: 80 },
-    { name: 'PostgreSQL', level: 75 },
-    { name: 'FireStore', level: 80 },
-    { name: 'SQL', level: 85 },
-    { name: 'NoSQL', level: 75 },
+    'MySQL', 'SQLite', 'PostgreSQL', 'FireStore', 'SQL', 'NoSQL'
   ];
 
   const languages = [
@@ -40,7 +27,7 @@ const Skills = () => {
   const devTools = ['Firebase', 'Supabase', 'Postman API'];
   
   // Interests
-  const interests = ['Badminton – Representative of the Computer Science Department of HKUST'];
+  const interests = ['Badminton', 'Music'];
 
   return (
     <section id="skills" className="skills-section py-5">
@@ -53,37 +40,27 @@ const Skills = () => {
         </div>
 
         {/* Frontend Skills */}
-        <div className="row justify-content-center mb-5">
-          <div className="col-lg-6">
-            <h3 className="skills-subsection-title text-center mb-4">Frontend</h3>
-            <div className="skills-container">
+        <div className="row justify-content-center mb-4">
+          <div className="col-lg-12">
+            <h3 className="skills-subsection-title text-center mb-3">Frontend</h3>
+            <div className="skills-line-container">
               {frontendSkills.map((skill, index) => (
-                <div className="skill-item mb-4" key={index}>
-                  <div className="skill-name-level">
-                    <h5>{skill.name}</h5>
-                    <span className="skill-percentage">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: `${skill.level}%` }}></div>
-                  </div>
+                <div className="skill-button" key={index}>
+                  {skill}
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Backend Skills */}
-          <div className="col-lg-6">
-            <h3 className="skills-subsection-title text-center mb-4">Backend</h3>
-            <div className="skills-container">
+        {/* Backend Skills */}
+        <div className="row justify-content-center mb-4">
+          <div className="col-lg-12">
+            <h3 className="skills-subsection-title text-center mb-3">Backend</h3>
+            <div className="skills-line-container">
               {backendSkills.map((skill, index) => (
-                <div className="skill-item mb-4" key={index}>
-                  <div className="skill-name-level">
-                    <h5>{skill.name}</h5>
-                    <span className="skill-percentage">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: `${skill.level}%` }}></div>
-                  </div>
+                <div className="skill-button" key={index}>
+                  {skill}
                 </div>
               ))}
             </div>
@@ -91,34 +68,28 @@ const Skills = () => {
         </div>
 
         {/* Database Skills */}
-        <div className="row justify-content-center mb-5">
-          <div className="col-lg-6">
-            <h3 className="skills-subsection-title text-center mb-4">Database</h3>
-            <div className="skills-container">
+        <div className="row justify-content-center mb-4">
+          <div className="col-lg-12">
+            <h3 className="skills-subsection-title text-center mb-3">Database</h3>
+            <div className="skills-line-container">
               {databaseSkills.map((skill, index) => (
-                <div className="skill-item mb-4" key={index}>
-                  <div className="skill-name-level">
-                    <h5>{skill.name}</h5>
-                    <span className="skill-percentage">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: `${skill.level}%` }}></div>
-                  </div>
+                <div className="skill-button" key={index}>
+                  {skill}
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Languages */}
-          <div className="col-lg-6">
-            <h3 className="skills-subsection-title text-center mb-4">Languages</h3>
-            <div className="skills-container">
+        {/* Languages */}
+        <div className="row justify-content-center mb-4">
+          <div className="col-lg-12">
+            <h3 className="skills-subsection-title text-center mb-3">Languages</h3>
+            <div className="skills-line-container">
               {languages.map((lang, index) => (
-                <div className="skill-item language-item mb-4" key={index}>
-                  <div className="skill-name-level">
-                    <h5>{lang.name}</h5>
-                    <span className="skill-level">{lang.level}</span>
-                  </div>
+                <div className="language-button" key={index}>
+                  <span className="language-name">{lang.name}</span>
+                  <span className="language-level">{lang.level}</span>
                 </div>
               ))}
             </div>
@@ -126,24 +97,28 @@ const Skills = () => {
         </div>
 
         {/* Developer Tools */}
-        <div className="row justify-content-center mt-5">
-          <div className="col-lg-8">
-            <h3 className="skills-subsection-title text-center mb-4">Developer Tools</h3>
-            <div className="tech-icons">
+        <div className="row justify-content-center mb-4">
+          <div className="col-lg-12">
+            <h3 className="skills-subsection-title text-center mb-3">Developer Tools</h3>
+            <div className="skills-line-container">
               {devTools.map((tool, index) => (
-                <div className="tech-icon" key={index}>{tool}</div>
+                <div className="skill-button" key={index}>
+                  {tool}
+                </div>
               ))}
             </div>
           </div>
         </div>
 
         {/* Interests */}
-        <div className="row justify-content-center mt-5">
-          <div className="col-lg-8">
-            <h3 className="skills-subsection-title text-center mb-4">Interests</h3>
-            <div className="interests-container text-center">
+        <div className="row justify-content-center mt-4">
+          <div className="col-lg-12">
+            <h3 className="skills-subsection-title text-center mb-3">Interests</h3>
+            <div className="skills-line-container">
               {interests.map((interest, index) => (
-                <div className="interest-item" key={index}>{interest}</div>
+                <div className="interest-button" key={index}>
+                  {interest}
+                </div>
               ))}
             </div>
           </div>

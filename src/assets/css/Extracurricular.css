@@ -1,6 +1,6 @@
-.experience-section {
-  padding-top: 3rem; /* Reduced from 7rem */
-  min-height: auto; /* Changed from 100vh */
+.extracurricular-section {
+  padding-top: 3rem;
+  min-height: auto;
   background-color: var(--bg-secondary);
   width: 100%;
 }
@@ -10,17 +10,17 @@
   padding: 0;
   list-style: none;
   width: 100%;
-  max-width: 1000px; /* Match container width */
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.experience-item {
+.extracurricular-item {
   position: relative;
   margin-bottom: 50px;
   width: 100%;
 }
 
-.experience-content {
+.extracurricular-content {
   padding: 30px;
   background: var(--card-bg);
   border-radius: 8px;
@@ -28,49 +28,45 @@
   position: relative;
   border-left: 4px solid var(--accent-color);
   transition: all 0.3s ease;
-  text-align: center;
   margin: 0 auto;
 }
 
-.experience-content:hover {
+.extracurricular-content:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.experience-header {
+.extracurricular-header {
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 15px;
-  text-align: center;
 }
 
-.job-title {
+.role-title {
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--accent-color);
-  text-align: center;
 }
 
-.company {
+.organization {
   font-weight: 500;
   margin-bottom: 8px;
   color: var(--text-primary);
-  text-align: center;
+  display: block;
 }
 
 .period, .location {
   color: var(--text-secondary);
   font-size: 0.9rem;
-  text-align: center;
 }
 
-.experience-body p {
+.extracurricular-body p {
   margin-bottom: 20px;
   color: var(--text-primary);
   text-align: left;
 }
 
-.responsibilities {
+.extracurricular-body .responsibilities {
   padding-left: 20px;
   margin: 0;
   list-style-position: outside;
@@ -78,7 +74,7 @@
   max-width: 100%;
 }
 
-.responsibilities li {
+.extracurricular-body .responsibilities li {
   margin-bottom: 8px;
   color: var(--text-secondary);
   text-align: left;
