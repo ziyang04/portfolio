@@ -159,29 +159,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  flex-wrap: wrap; /* Changed from nowrap to wrap */
   padding: 10px 0;
   margin: 0 auto;
   width: 100%;
   gap: 15px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) var(--bg-secondary);
-  white-space: nowrap;
-}
-
-.skills-line-container::-webkit-scrollbar {
-  height: 6px;
-}
-
-.skills-line-container::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
-  border-radius: 10px;
-}
-
-.skills-line-container::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
-  border-radius: 10px;
+  /* Removed scrollbar styling */
 }
 
 /* Button styling for skills, languages, and interests */
@@ -198,7 +181,7 @@
   white-space: nowrap;
   min-width: fit-content;
   display: inline-block;
-  margin-right: 10px;
+  margin: 0 5px 10px 5px; /* Changed margin to create space between items vertically */
   flex-shrink: 0;
 }
 
@@ -241,8 +224,65 @@
 /* Media query for small screens */
 @media (max-width: 768px) {
   .skills-line-container {
-    justify-content: flex-start;
-    padding-left: 15px;
-    padding-right: 15px;
+    justify-content: center; /* Changed from flex-start to center */
+    padding: 10px 15px;
+  }
+
+  .skill-button, .language-button, .interest-button {
+    margin-bottom: 12px; /* Increased bottom margin for better spacing */
+  }
+  
+  .skills-section {
+    padding-top: 2rem;
+  }
+  
+  .skill-category {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .category-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-item {
+    padding: 0.5rem 0.75rem;
+    margin: 0 0.4rem 0.4rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .skills-container {
+    padding: 0 1rem;
+  }
+  
+  .skill-category {
+    padding: 1rem;
+  }
+  
+  .category-title {
+    font-size: 1.1rem;
+  }
+  
+  .skill-item {
+    padding: 0.4rem 0.65rem;
+    margin: 0 0.3rem 0.3rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .skills-line-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .skill-button, .language-button, .interest-button {
+    width: 80%; /* Make buttons wider on mobile */
+    margin: 0 0 8px 0;
+    text-align: center;
+    justify-content: center;
   }
 }

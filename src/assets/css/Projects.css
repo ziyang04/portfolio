@@ -126,3 +126,86 @@
   max-width: 1000px; /* Match container width */
   margin: 0 auto;
 }
+
+/* Responsive styles for medium screens */
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .project-card {
+    height: auto;
+  }
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .projects-section {
+    padding-top: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 0 10px;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    margin: 0 0.25rem 0.5rem;
+  }
+  
+  .project-filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .project-filters {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  .filter-btn {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.9rem;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+  }
+  
+  .project-tech span {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+}

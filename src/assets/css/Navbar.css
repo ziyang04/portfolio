@@ -91,34 +91,33 @@ html {
   }
   
   .container {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column; /* Changed to column to keep title at top */
+    justify-content: center;
     padding-top: 0;
     padding-left: 15px;
     padding-right: 15px;
   }
   
   .navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem; /* Increased from 1.3rem */
-    margin: 0;
+    position: relative; /* Changed from absolute to relative */
+    transform: none; /* Remove transform */
+    left: auto; /* Remove left positioning */
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0; /* Add bottom margin */
     padding-top: 0.15rem;
     padding-bottom: 0.15rem;
     text-align: center;
-    width: auto;
+    width: 100%; /* Full width to center properly */
   }
   
   .navbar-toggler {
-    position: relative;
-    margin-left: auto;
+    position: absolute; /* Position absolutely */
+    top: 10px; /* Position from top */
+    right: 15px; /* Position from right */
     padding: 0.2rem 0.4rem;
     font-size: 0.85rem;
     height: fit-content;
     z-index: 1030;
-    float: right; /* Float to right side */
-    flex: 0 0 auto; /* Don't allow flex to change size */
   }
   
   .navbar-collapse {
@@ -155,5 +154,49 @@ html {
   .nav-item .btn {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+}
+
+/* Additional responsive breakpoints for smaller screens */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem; /* Smaller margin on smaller screens */
+  }
+  
+  .navbar-toggler {
+    padding: 0.15rem 0.3rem;
+    font-size: 0.8rem;
+    top: 8px; /* Adjust position on smallest screens */
+  }
+  
+  .navbar-collapse {
+    right: 10px;
+    min-width: 180px;
+    padding: 0.75rem;
+  }
+  
+  /* Adjust navbar padding to be more compact */
+  .navbar {
+    padding: 0.5rem 0.5rem;
+  }
+  
+  /* Make nav links more compact on smallest screens */
+  .nav-link {
+    padding: 0.4rem 0;
+    margin: 0 0.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Ensure smooth transitions when switching between screen sizes */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+  
+  .nav-link {
+    margin: 0 0.3rem;
+    font-size: 0.95rem;
   }
 }

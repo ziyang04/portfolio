@@ -90,4 +90,72 @@
     padding-left: 20px;
     max-width: 100%;
   }
+  
+  .experience-section {
+    padding-top: 2rem;
+  }
+  
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline::before {
+    left: 0.5rem;
+  }
+  
+  .timeline-item::before {
+    left: -0.1rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .experience-date {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-size: 0.85rem;
+  }
+  
+  .experience-content {
+    margin-left: 0;
+  }
+  
+  .experience-position {
+    font-size: 1.2rem;
+  }
+  
+  .experience-company {
+    font-size: 1rem;
+  }
+  
+  .experience-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .timeline-item {
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-position {
+    font-size: 1.1rem;
+  }
+  
+  .experience-company {
+    font-size: 0.9rem;
+  }
+  
+  .experience-description {
+    font-size: 0.85rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
 }

@@ -147,4 +147,70 @@
     height: 35px;
     font-size: 1rem;
   }
+  
+  .education-card {
+    padding: 1rem;
+  }
+  
+  .education-logo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .degree {
+    font-size: 1.1rem;
+  }
+  
+  .university {
+    font-size: 0.95rem;
+  }
+  
+  .education-date, .education-gpa {
+    font-size: 0.85rem;
+  }
+  
+  .education-courses li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .education-section {
+    padding-top: 2rem;
+  }
+  
+  .education-card {
+    flex-direction: column;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .education-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+  }
+  
+  .education-details {
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  .degree {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .university {
+    font-size: 1rem;
+  }
+  
+  .education-date, .education-gpa {
+    font-size: 0.9rem;
+  }
+  
+  .education-courses {
+    padding-left: 1rem;
+  }
 }

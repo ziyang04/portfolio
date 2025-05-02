@@ -171,4 +171,62 @@
     width: 150px;
     height: 150px;
   }
+  
+  .section-content {
+    padding: 2rem 1rem;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-icons a {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Adjust heading margins to prevent too much whitespace */
+  .about-text {
+    text-align: center;
+  }
+  
+  .profile-image {
+    margin: 0 auto 1.5rem auto;
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .about-text h1 {
+    font-size: 2rem;
+  }
+  
+  .about-text p {
+    font-size: 0.95rem;
+  }
+  
+  .profile-image {
+    max-width: 180px;
+  }
+  
+  .btn-custom {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.25rem;
+  }
 }

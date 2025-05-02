@@ -157,3 +157,79 @@
     margin-bottom: 2rem;
   }
 }
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .contact-section {
+    padding-top: 2rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .contact-info {
+    padding: 1.5rem;
+  }
+  
+  .contact-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form-container {
+    flex-direction: column;
+  }
+  
+  .contact-form, .contact-info {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    font-size: 0.9rem;
+  }
+  
+  .contact-info-item {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info-item i {
+    font-size: 1.3rem;
+    margin-right: 0.75rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .contact-container {
+    padding: 0 1rem;
+  }
+  
+  .contact-form, .contact-info {
+    padding: 1.25rem;
+  }
+  
+  .contact-title {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info-item {
+    font-size: 0.9rem;
+  }
+  
+  .contact-info-item i {
+    font-size: 1.2rem;
+    margin-right: 0.6rem;
+  }
+  
+  .form-control {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .btn-submit {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.25rem;
+  }
+}
