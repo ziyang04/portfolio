@@ -1,4 +1,4 @@
-# Computer Science Portfolio Template
+# Computer Science Student Portfolio 
 
 A clean, responsive portfolio website template built with React, specifically designed for computer science student.
 
