@@ -5,7 +5,7 @@ A clean, responsive portfolio website template built with React, specifically de
 ## Features
 
 - Modern, responsive design
-- Easy to customize sections for your CV/resume information
+- Showcase CV/resume information
 - Separate sections for skills, projects, work experience, education, and contact information
 - Built with React and Bootstrap for a robust, mobile-friendly experience
 - Clean and professional design to showcase your professional background
