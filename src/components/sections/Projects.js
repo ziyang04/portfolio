@@ -24,6 +24,16 @@ const Projects = () => {
       technologies: ['React', 'JavaScript', 'HTML', 'CSS'],
       liveLink: '',
       sourceLink: 'https://github.com/ziyang04/Catering-Website'
+    },
+    {
+      id: 3,
+      title: 'Property Price Prediction Model',
+      description: 'An AI model that trains on the California Housing dataset to predict house prices using regression.',
+      image: require('../../assets/img/Property.png'), // Use require to reference the image
+      category: 'AI',
+      technologies: ['Machine Learning', 'Scikit-learn', 'Keras', 'TensorFlow'],
+      liveLink: '',
+      sourceLink: 'https://github.com/ziyang04/MLP_project'
     }
     // Add more projects here as you develop them
   ];
