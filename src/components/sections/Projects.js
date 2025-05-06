@@ -11,7 +11,7 @@ const Projects = () => {
       description: 'A website to showcase my creative journey as a junior software engineer, blending innovation and design to bring ideas to life',
       image: require('../../assets/img/portfolio.png'), 
       category: 'web',
-      technologies: ['React', 'JavaScript', 'HTML', 'CSS'],
+      technologies: ['React', 'Bootstrap', 'JavaScript', 'HTML', 'CSS'],
       liveLink: 'https://portfolio-5smz8x7qt-zi-yangs-projects-80f09863.vercel.app',
       sourceLink: 'https://github.com/ziyang04/portfolio'
     },
