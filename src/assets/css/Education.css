@@ -40,6 +40,9 @@
   .education-icon {
     display: none;
   }
+  .education-item {
+    padding-left: 0px;
+  }
 }
 
 .education-content {
@@ -144,9 +147,7 @@
 }
 
 @media (max-width: 576px) {
-  .education-item {
-    padding-left: 50px;
-  }
+  
   
   .education-icon {
     width: 35px;
