@@ -7,6 +7,12 @@ const HomeAbout = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
+  // Prevent right-click on the profile image
+  const preventRightClick = (e) => {
+    e.preventDefault();
+    return false;
+  };
+  
   useEffect(() => {
     const interval = 100; // typing speed in milliseconds
     const deletingInterval = 50; // deleting speed (faster than typing)
@@ -53,13 +59,18 @@ const HomeAbout = () => {
             <h1 className="display-3 fw-bold">PANG, Zi Yang</h1>
             <h2 className="lead mb-4">
               <span className="typing-text">{currentPhrase}</span>
-              
             </h2>
             
-            {/* Profile image added here */}
+            {/* Profile image with download prevention */}
             <div className="profile-image-container">
               <div className="profile-image-placeholder">
-                <img src={require('../../assets/img/DSC00351.JPG')} alt="Profile" className="img-fluid rounded-circle" />
+                <img 
+                  src={require('../../assets/img/DSC00351.JPG')} 
+                  alt="Profile" 
+                  className="img-fluid rounded-circle" 
+                  onContextMenu={preventRightClick}
+                  draggable="false"
+                />
               </div>
             </div>
             

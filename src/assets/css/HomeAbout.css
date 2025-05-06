@@ -80,10 +80,11 @@
   gap: 1rem;
 }
 
-/* Profile image styling (moved from about section) */
+/* Profile image styling with download prevention */
 .profile-image-container {
   text-align: center;
   margin: 1.5rem auto;
+  position: relative; /* Required for the overlay */
 }
 
 .profile-image-placeholder {
@@ -100,6 +101,22 @@
   margin: 0 auto;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden; /* Add this to contain the image */
+  position: relative; /* Required for overlay */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.profile-image-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .profile-image-placeholder img {
@@ -107,6 +124,15 @@
   height: 100%;
   object-fit: cover; /* This ensures the image covers the container while maintaining aspect ratio */
   object-position: center; /* Centers the image within the container */
+  -webkit-user-drag: none; /* Safari */
+  -khtml-user-drag: none; /* Older browsers */
+  -moz-user-drag: none; /* Firefox */
+  -o-user-drag: none; /* Opera */
+  -ms-user-drag: none; /* Internet Explorer */
+  user-drag: none; /* Standard syntax (currently not supported) */
+  pointer-events: none; /* Prevents mouse interactions */
+  user-select: none; /* Prevents text selection */
+  -webkit-touch-callout: none; /* iOS Safari */
 }
 
 /* Button styles */
