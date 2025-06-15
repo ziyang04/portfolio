@@ -24,7 +24,7 @@ const Skills = () => {
   ];
 
   // Developer tools
-  const devTools = ['Firebase', 'Supabase', 'Postman API'];
+  const devTools = ['Firebase', 'Supabase', 'Postman API', 'Git', 'Azure'];
   
   // Interests
   const interests = ['Badminton', 'Music'];
@@ -81,6 +81,20 @@ const Skills = () => {
           </div>
         </div>
 
+        {/* Developer Tools */}
+        <div className="row justify-content-center mb-4">
+          <div className="col-lg-12">
+            <h3 className="skills-subsection-title text-center mb-3">Developer Tools</h3>
+            <div className="skills-line-container">
+              {devTools.map((tool, index) => (
+                <div className="skill-button" key={index}>
+                  {tool}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        
         {/* Languages */}
         <div className="row justify-content-center mb-4">
           <div className="col-lg-12">
@@ -95,21 +109,7 @@ const Skills = () => {
             </div>
           </div>
         </div>
-
-        {/* Developer Tools */}
-        <div className="row justify-content-center mb-4">
-          <div className="col-lg-12">
-            <h3 className="skills-subsection-title text-center mb-3">Developer Tools</h3>
-            <div className="skills-line-container">
-              {devTools.map((tool, index) => (
-                <div className="skill-button" key={index}>
-                  {tool}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
+        
         {/* Interests */}
         <div className="row justify-content-center mt-4">
           <div className="col-lg-12">
