@@ -5,12 +5,14 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      position: 'Incoming Full Stack AI Engineer Intern',
+      position: 'Full-Stack AI Engineer Intern',
       company: 'Zonic Tech',
       location: 'Hong Kong',
       period: 'June 2025 - Aug 2025',
-      description: 'In charge of backend and API development, AI tool building, integration of video understanding modules, and assisting in real-world deployment and optimization of AI agent workflows.',
-      responsibilities: []
+      description: '',
+      responsibilities: [
+        'Leveraged OpenAI’s Large Language Model to build a personalized accommodation recommendation system in Hong Kong using LangGraph framework, dynamically tailoring suggestions based on user preferences like location and budget.', 
+        'Built a custom AI state management system using nested React context architecture to replace Vercel’s AI SDK RSC in company’s codebase, resulting in approximately 60% faster client-side updates due to eliminating heavy server-side processing.']
     },
     {
       id: 2,

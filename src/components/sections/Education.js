@@ -78,9 +78,9 @@ const Education = () => {
       period: 'Sep 2023 – June 2027',
       description: 'First Class Honours (Expected)',
       highlights: [
-        'CGPA: 3.943/4.3 | 3x Dean\'s List',
+        'CGPA: 3.961/4.3 | 4x Dean\'s List',
         'HKUST Full Scholarship Admission Holder',
-        'Relevant Modules: DBMS (A+), Programming with C++ (A+), OOP & Data Structures (A), Applied Statistics (A), Calculus II (A)'
+        'Relevant Modules: DBMS (A+), Programming with C++ (A+), OOP & Data Structures (A), Algorithms (A), Applied Statistics (A), Calculus II (A)'
       ]
     },
     {

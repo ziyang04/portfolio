@@ -8,7 +8,7 @@ const Extracurricular = () => {
       position: 'Undergraduate Teaching Assistant',
       company: 'HKUST Computer Science Department',
       location: 'Hong Kong',
-      period: 'Jan 2025 - Present',
+      period: 'Jan 2025 - May 2025',
       description: '',
       responsibilities: [
         'Provided guidance on C++ syntax and programming logic to 510 students in the Programming with C++ course, while assisting them in comprehending core computer science concepts, including pointers, dynamic memory allocation, object-oriented programming, and data structures.'
@@ -30,7 +30,7 @@ const Extracurricular = () => {
       position: 'Internal Vice President',
       company: 'HKUST Southeast Asia Student Association',
       location: 'Hong Kong',
-      period: 'Mar 2024 - Present',
+      period: 'Mar 2024 - Mar 2025',
       description: '',
       responsibilities: [
         'Led the coordination with the university administration, including event promotion, proposal development, and collaborative event organization, to successfully host a pre-university arrival program that engaged 60 incoming university students.',

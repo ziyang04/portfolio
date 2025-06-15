@@ -61,6 +61,12 @@
   transition: transform 0.5s ease;
 }
 
+/* New class for displaying FoodMates image fully */
+.project-image img.full-image {
+  object-fit: contain;
+  background-color: #fff;  /* Optional: adds a white background if the image has transparency */
+}
+
 .project-card:hover .project-image img {
   transform: scale(1.1);
 }
@@ -106,16 +112,54 @@
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 8px;
+  margin-top: 0;
+}
+
+.technologies-heading {
+  position: relative;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.technologies-heading::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--accent-color);
+  margin-right: 8px;
+}
+
+.project-role {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  padding-left: 0.25rem;
+  border-left: 3px solid var(--accent-color);
 }
 
 .tech-tag {
-  padding: 0.25rem 0.75rem;
-  border-radius: 30px;
+  padding: 4px 12px;
+  border-radius: 4px;
   background-color: var(--bg-secondary);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-secondary);
+  transition: all 0.2s ease;
+  /* Removed border-left property */
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  color: var(--accent-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
 .project-grid {
@@ -125,6 +169,25 @@
   width: 100%;
   max-width: 1000px; /* Match container width */
   margin: 0 auto;
+}
+
+.technologies-container {
+  margin-top: 15px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+
+.technologies-label {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 /* Responsive styles for medium screens */

@@ -75,7 +75,7 @@ const HomeAbout = () => {
             </div>
             
             <div className="hero-buttons mt-4">
-              <a href="#projects" className="btn btn-outline-secondary">View Projects</a>
+              <a href="/ZiYang_CV.pdf" className="btn btn-outline-secondary" download>Download CV</a>
               <a href="#contact" className="btn btn-outline-secondary">Contact Me</a>
             </div>
           </div>
