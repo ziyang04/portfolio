@@ -80,7 +80,7 @@ const Education = () => {
       highlights: [
         'CGPA: 3.961/4.3 | 4x Dean\'s List',
         'HKUST Full Scholarship Admission Holder',
-        'Relevant Modules: DBMS (A+), Programming with C++ (A+), OOP & Data Structures (A), Algorithms (A), Applied Statistics (A), Calculus II (A)'
+        'Relevant Modules: DBMS (A+), Programming with C++ (A+), Exploring AI (A+), OOP & Data Structures (A), Algorithms (A), Applied Statistics (A), Calculus II (A)'
       ]
     },
     {
