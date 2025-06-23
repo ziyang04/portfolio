@@ -13,7 +13,7 @@ return (
                 </div>
                 <div className="col-md-6 text-end">
                     <div className="social-links">
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <a href="https://github.com/ziyang04" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                         <a href="https://linkedin.com/in/zi-yang-pang" target="_blank" rel="noopener noreferrer" className="social-icon">
