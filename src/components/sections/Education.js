@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../assets/css/Education.css';
 
 const Education = () => {
+  const [expandedModulesIndex, setExpandedModulesIndex] = useState(null);
+  
+  // Toggle modules dropdown for specific education item
+  const toggleModules = (index) => {
+    if (expandedModulesIndex === index) {
+      setExpandedModulesIndex(null);
+    } else {
+      setExpandedModulesIndex(index);
+    }
+  };
+  
   // Process highlights to split items with pipe characters into separate list items
   // and format them with proper structure
   const processHighlights = (highlights) => {
@@ -13,10 +24,13 @@ const Education = () => {
         // Split by pipe and trim whitespace
         const splitHighlights = highlight.split('|').map(item => item.trim());
         // Add each split item to the array with appropriate formatting
-        processedHighlights.push(...splitHighlights.map(item => formatHighlight(item)));
+        processedHighlights.push(...splitHighlights.map(item => formatHighlight(item)).filter(Boolean));
       } else {
-        // Add the highlight with formatting
-        processedHighlights.push(formatHighlight(highlight));
+        // Add the highlight with formatting if not null
+        const formatted = formatHighlight(highlight);
+        if (formatted) {
+          processedHighlights.push(formatted);
+        }
       }
     });
     
@@ -33,11 +47,6 @@ const Education = () => {
     // Format awards
     if (highlight.startsWith('Awards:')) {
       return <><strong>Awards:</strong> {highlight.substring(7).trim()}</>;
-    }
-    
-    // Format relevant modules
-    if (highlight.startsWith('Relevant Modules:')) {
-      return <><strong>Relevant Modules:</strong> {highlight.substring(17).trim()}</>;
     }
     
     // Format Top entries
@@ -79,8 +88,20 @@ const Education = () => {
       description: 'First Class Honours (Expected)',
       highlights: [
         'CGPA: 3.961/4.3 | 4x Dean\'s List',
-        'HKUST Full Scholarship Admission Holder',
-        'Relevant Modules: DBMS (A+), Programming with C++ (A+), Exploring AI (A+), OOP & Data Structures (A), Algorithms (A), Applied Statistics (A), Calculus II (A)'
+        'HKUST Full Scholarship Admission Holder'
+      ],
+      courses: [
+        'COMP3711 Design and Analysis of Algorithms',
+        'COMP3311 Database Management Systems',
+        'COMP2012 Object Oriented Programming & Data Structures',
+        'COMP2611 Computer Organization',
+        'COMP2211 Exploring Artificial Intelligence',
+        'COMP2011 Programming with C++',
+        'COMP1021 Introduction to Computer Science',
+        'MATH2411 Applied Statistics',
+        'MATH2111 Matrix Algebra and Applications',
+        'MATH1014 Calculus II',
+        'FINA2203 Fundamentals of Business Finance',
       ]
     },
     {
@@ -92,7 +113,8 @@ const Education = () => {
       highlights: [
         'Computer Science (A*), Further Mathematics (A*), Mathematics(A*), Physics (A*)',
         'Awards: Top in Malaysia in A-Levels Mathematics | Ranked 1st in Computer Science and Mathematics within the cohort'
-      ]
+      ],
+      courses: []
     }
   ];
 
@@ -129,6 +151,29 @@ const Education = () => {
                     {processHighlights(edu.highlights).map((highlight, idx) => (
                       <li key={idx}>{highlight}</li>
                     ))}
+                    
+                    {edu.courses.length > 0 && (
+                      <li>
+                        <div className="modules-dropdown-header" onClick={() => toggleModules(index)} 
+                             style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}>
+                          <strong style={{ textAlign: 'center' }}>Relevant Courses:</strong>
+                          <span className={`dropdown-arrow ${expandedModulesIndex === index ? 'expanded' : ''}`}
+                                style={{ position: 'absolute', right: 10 }}>
+                            <i className={`fas fa-chevron-${expandedModulesIndex === index ? 'up' : 'down'}`}></i>
+                          </span>
+                        </div>
+                        
+                        {expandedModulesIndex === index && (
+                          <div className="modules-grid">
+                            {edu.courses.map((course, idx) => (
+                              <div key={idx} className="module-item">
+                                <span className="module-name">{course}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>
