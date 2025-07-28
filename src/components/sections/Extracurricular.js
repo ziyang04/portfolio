@@ -22,7 +22,8 @@ const Extracurricular = () => {
       period: 'Dec 2024 - Present',
       description: '',
       responsibilities: [
-        'Led a team of 5 developers to revamp the web application by updating and creating profiles for board members, enhancing user information accessibility using ReactJS'
+        'Led and collaborated in a 5-developer team to design and deploy an intuitive events page to showcase the organization’s annual events, significantly streamlining information access and enhancing user understanding of organizational initiatives, utilizing Next.js.',
+        'Reviewed and debugged Next.js code authored by webmasters, managing Git workflows for clean merges and stable deployments.'
       ]
     },
     {

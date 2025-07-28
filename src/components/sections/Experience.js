@@ -11,7 +11,9 @@ const Experience = () => {
       period: 'June 2025 - Aug 2025',
       description: '',
       responsibilities: [
-        'Leveraged OpenAI’s Large Language Model to build a personalized accommodation recommendation system in Hong Kong using LangGraph framework, dynamically tailoring suggestions based on user preferences like location and budget.', 
+        'Engineered an AI-powered video editing system that integrates OpenAI’s Large Language Model (LLM) and Retrieval-Augmented Generation with Redis for dynamic data retrieval, leveraging LangChain to create an agentic AI workflow that helps users automate the video editing experience and delivers personalized results, enhancing user efficiency and engagement.',
+        'Partnered with the CEO to deliver an engaging pitch to potential enterprise clients and investors, showcasing the company’s groundbreaking video understanding model and its innovative applications in AI video editing, resulting in enthusiastic feedback.',
+        'Optimised the parameters passed to PySceneDetect’s detect function, achieving a 56% increase in scene detection accuracy.',
         'Built a custom AI state management system using nested React context architecture to replace Vercel’s AI SDK RSC in company’s codebase, resulting in approximately 60% faster client-side updates due to eliminating heavy server-side processing.']
     },
     {
@@ -23,8 +25,7 @@ const Experience = () => {
       description: '',
       responsibilities: [
         'Spearheaded the development of an SMTP-based email verification tool using Python that identified 60% of invalid email addresses from the online-collected contact list, allowing the company to focus marketing efforts on the remaining 40% of potential clients.',
-        'Initiated the development of a full-stack director remuneration analytics platform using .NET framework and C#, integrating jQuery, HTML, Bootstrap and MySQL, leveraging market data to analyse compensation trends and deliver strategic recommendations for clients to optimise their executive pay strategies.',
-        'Proposed and executed the launching of a customizable comparison tool enabling clients, comprised of over 1,000 multinational companies, to benchmark their executive compensation against publicly listed companies of their choice, boosting company\'s revenue via a subscription-based model.'
+        'Engineered a full-stack director remuneration analytics platform that leverages market data to analyze compensation trends and deliver data-driven recommendations, empowering over 1,000 existing multinational enterprise clients to access executive pay insights and optimize their pay strategies, generating average fees of USD2,300 each, using .NET, MySQL, jQuery, and Bootstrap.'
       ]
     },
     {
