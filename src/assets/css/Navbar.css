@@ -85,9 +85,9 @@ html {
 
 @media (max-width: 992px) {
   .navbar {
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    min-height: 50px; /* Set a specific min-height */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-height: 80px; /* Increased min-height */
   }
   
   .container {
@@ -112,10 +112,10 @@ html {
   
   .navbar-toggler {
     position: absolute; /* Position absolutely */
-    top: 10px; /* Position from top */
+    top: 12px; /* Adjusted position from top */
     right: 15px; /* Position from right */
-    padding: 0.2rem 0.4rem;
-    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem; /* Larger padding */
+    font-size: 1rem; /* Larger font size */
     height: fit-content;
     z-index: 1030;
   }
@@ -125,10 +125,10 @@ html {
     top: 100%;
     right: 15px;
     width: auto;
-    min-width: 200px;
-    max-width: 250px;
+    min-width: 220px; /* Slightly wider */
+    max-width: 280px; /* Slightly wider */
     background-color: var(--navbar-bg);
-    padding: 1rem;
+    padding: 1.2rem; /* More padding */
     border-radius: 0.5rem;
     margin-top: 0.5rem;
     text-align: right;
@@ -149,6 +149,12 @@ html {
   .nav-item {
     text-align: right;
     width: 100%;
+    margin-bottom: 0.5rem; /* Add some spacing between items */
+  }
+  
+  .nav-link {
+    font-size: 1.1rem; /* Larger font size */
+    padding: 0.6rem 0; /* More padding */
   }
   
   .nav-item .btn {
@@ -160,32 +166,32 @@ html {
 /* Additional responsive breakpoints for smaller screens */
 @media (max-width: 576px) {
   .navbar-brand {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem; /* Smaller margin on smaller screens */
+    font-size: 1.4rem; /* Slightly larger */
+    margin-bottom: 0.3rem;
   }
   
   .navbar-toggler {
-    padding: 0.15rem 0.3rem;
-    font-size: 0.8rem;
-    top: 8px; /* Adjust position on smallest screens */
+    padding: 0.25rem 0.4rem; /* Larger padding */
+    font-size: 0.9rem; /* Larger font */
+    top: 10px; /* Adjust position */
   }
   
   .navbar-collapse {
     right: 10px;
-    min-width: 180px;
-    padding: 0.75rem;
+    min-width: 200px; /* Wider menu */
+    padding: 1rem; /* More padding */
   }
   
   /* Adjust navbar padding to be more compact */
   .navbar {
-    padding: 0.5rem 0.5rem;
+    padding: 0.6rem 0.5rem; /* More padding */
   }
   
   /* Make nav links more compact on smallest screens */
   .nav-link {
-    padding: 0.4rem 0;
+    padding: 0.5rem 0; /* More padding */
     margin: 0 0.3rem;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Larger font size */
   }
 }
 

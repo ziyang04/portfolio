@@ -124,6 +124,33 @@
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05);
 }
 
+/* Responsive styles for the introduction text */
+.intro-first-line {
+  display: inline;
+}
+
+/* Show extended content by default on larger screens */
+.intro-extended-content {
+  display: inline;
+}
+
+/* Hide extended content on mobile screens */
+@media (max-width: 767.98px) {
+  .intro-extended-content {
+    display: none;
+  }
+  
+  .intro-first-line {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .introduction-text {
+    text-align: center;
+  }
+}
+
 .profile-image-placeholder::after {
   content: '';
   position: absolute;

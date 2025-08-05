@@ -32,11 +32,13 @@ const HomeAbout = () => {
             {/* Introduction paragraph */}
             <div className="introduction-container">
               <p className="introduction-text">
-                I’m an incoming penultimate-year Computer Science student at HKUST.
-                Over the past two years, I have gained substantial experience, currently serving as a Full-Stack AI Engineer intern while also completing two previous internships where I contributed to diverse full-stack projects. 
-                I have worked on multiple personal projects that showcase my skills in machine learning, frontend and backend development. 
-                My academic performance places me in the top 1% of undergraduates, with a GPA of 3.96. 
-                Beyond academics, I actively participate in extracurricular activities that strengthen my leadership and collaborative skills. 
+                <span className="intro-first-line">I'm an incoming penultimate-year Computer Science student at HKUST. </span>
+                <span className="intro-extended-content">
+                  Over the past two years, I have gained substantial experience, currently serving as a Full-Stack AI Engineer intern while also completing two previous internships where I contributed to diverse full-stack projects. 
+                  I have worked on multiple personal projects that showcase my skills in machine learning, frontend and backend development. 
+                  My academic performance places me in the top 1% of undergraduates, with a GPA of 3.96. 
+                  Beyond academics, I actively participate in extracurricular activities that strengthen my leadership and collaborative skills. 
+                </span>
               </p>
             </div>
             
