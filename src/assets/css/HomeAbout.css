@@ -107,6 +107,23 @@
   user-select: none; /* Standard syntax */
 }
 
+/* Introduction paragraph styling */
+.introduction-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.introduction-text {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05);
+}
+
 .profile-image-placeholder::after {
   content: '';
   position: absolute;

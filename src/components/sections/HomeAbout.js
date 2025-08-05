@@ -1,54 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../../assets/css/HomeAbout.css';
 
 const HomeAbout = () => {
-  const phrases = ["Child of God...", "Year 2 Computer Science Student...", "Proud Malaysian..."];
-  const [currentPhrase, setCurrentPhrase] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  
   // Prevent right-click on the profile image
   const preventRightClick = (e) => {
     e.preventDefault();
     return false;
   };
-  
-  useEffect(() => {
-    const interval = 100; // typing speed in milliseconds
-    const deletingInterval = 50; // deleting speed (faster than typing)
-    const pauseTime = 1500; // time to pause after fully typing a phrase
-    
-    const type = () => {
-      const currentPhraseText = phrases[currentIndex];
-      
-      if (isDeleting) {
-        // Deleting phase
-        setCurrentPhrase(currentPhraseText.substring(0, currentPhrase.length - 1));
-        
-        // When done deleting
-        if (currentPhrase.length === 0) {
-          setIsDeleting(false);
-          // Move to next phrase
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-        }
-      } else {
-        // Typing phase
-        setCurrentPhrase(currentPhraseText.substring(0, currentPhrase.length + 1));
-        
-        // When done typing
-        if (currentPhrase === currentPhraseText) {
-          // Pause before starting to delete
-          setTimeout(() => setIsDeleting(true), pauseTime);
-          return;
-        }
-      }
-    };
-    
-    // Set timer for typing/deleting effect
-    const timer = setTimeout(type, isDeleting ? deletingInterval : interval);
-    
-    return () => clearTimeout(timer);
-  }, [currentPhrase, currentIndex, isDeleting, phrases]);
 
   return (
     <section id="home" className="home-section">
@@ -57,9 +15,6 @@ const HomeAbout = () => {
         <div className="row h-100 align-items-center">
           <div className="col-md-12 text-center">
             <h1 className="display-3 fw-bold">PANG, Zi Yang</h1>
-            <h2 className="lead mb-4">
-              <span className="typing-text">{currentPhrase}</span>
-            </h2>
             
             {/* Profile image with download prevention */}
             <div className="profile-image-container">
@@ -74,6 +29,16 @@ const HomeAbout = () => {
               </div>
             </div>
             
+            {/* Introduction paragraph */}
+            <div className="introduction-container">
+              <p className="introduction-text">
+                I’m an incoming penultimate-year Computer Science student at HKUST.
+                Over the past two years, I have gained substantial experience, currently serving as a Full-Stack AI Engineer intern while also completing two previous internships where I contributed to diverse full-stack projects. 
+                I have worked on multiple personal projects that showcase my skills in machine learning, frontend and backend development. 
+                My academic performance places me in the top 1% of undergraduates, with a GPA of 3.96. 
+                Beyond academics, I actively participate in extracurricular activities that strengthen my leadership and collaborative skills. 
+              </p>
+            </div>
             
           </div>
         </div>
