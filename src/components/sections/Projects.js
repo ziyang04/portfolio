@@ -7,7 +7,19 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Food Delivery App for University Students',
+      title: 'All-in-One Digitized Learning Hub for Children, Parents, and Teachers',
+      description: 'An interactive platform that facilitates learning for children, connects parents with each other and teachers through live chat, and serves as a centralized hub for teachers to manage homework. Featuring an AI-powered homework manager, it enhances collaboration and streamlines the educational experience for all users.',
+      role: 'Full Stack Developer',
+      image: require('../../assets/img/CodetoGive.png'),
+      category: 'Web',
+      technologies: ['React', 'TailwindCSS', 'Flask', 'Supabase', 'TypeScript','Python', 'PostgreSQL','Deepseek API'],
+      liveLink: '',
+      sourceLink: 'https://github.com/ziyang04/Code_to_Give_Project_CARE',
+      fullImage: true
+    },
+    {
+      id: 2,
+      title: 'Campus Food Delivery App for University Students',
       description: 'A full-stack mobile application designed for university students to order food and have other student deliverers help deliver, featuring browsing, cart, and purchase functionalities. This project is fully developed and waiting to be launched as part of my startup.',
       role: 'Backend Engineer',
       image: require('../../assets/img/FoodMates.png'), // Use require to reference the image
@@ -18,7 +30,7 @@ const Projects = () => {
       fullImage: true // Add this flag for FoodMates image
     },
     {
-      id: 2,
+      id: 3,
       title: 'Property Price Prediction Model',
       description: 'An AI-powered model leveraging the California Housing dataset to predict property prices using advanced regression techniques.',
       image: require('../../assets/img/Property.png'), // Use require to reference the image
@@ -28,7 +40,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/MLP_project'
         },
         {
-      id: 3,
+      id: 4,
       title: 'Image Classification Model',
       description: 'An AI-powered model utilizing convolutional neural networks (CNN) to classify and categorize various objects with an accuracy as high as 70.3%.',
       image: require('../../assets/img/dataset-cover.jpeg'), // Use require to reference the image
@@ -38,7 +50,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/CNN'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Portfolio Website',
       description: 'A personal portfolio showcasing my journey as a junior software engineer, highlighting innovation and design.',
       image: require('../../assets/img/portfolio.png'), 
@@ -48,7 +60,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/portfolio'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Food Catering Website',
       description: 'A web platform streamlining event planning by enabling users to customize menus for large-scale occasions.',
       image: require('../../assets/img/catering.png'), // Use require to reference the image
