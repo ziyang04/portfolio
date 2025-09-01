@@ -5,25 +5,25 @@ const Extracurricular = () => {
   const extracurriculars = [
     {
       id: 1,
-      position: 'Undergraduate Teaching Assistant',
-      company: 'HKUST Computer Science Department',
-      location: 'Hong Kong',
-      period: 'Jan 2025 - May 2025',
-      description: '',
-      responsibilities: [
-        'Provided guidance on C++ syntax and programming logic to 510 students in the Programming with C++ course, while assisting them in comprehending core computer science concepts, including pointers, dynamic memory allocation, object-oriented programming, and data structures.'
-      ]
-    },
-    {
-      id: 2,
       position: 'Lead Webmaster',
       company: 'Hong Kong Malaysian Student Association',
       location: 'Hong Kong',
-      period: 'Dec 2024 - Present',
+      period: 'Jan 2025 - Present',
       description: '',
       responsibilities: [
         'Led and collaborated in a 5-developer team to design and deploy an intuitive events page to showcase the organization’s annual events, significantly streamlining information access and enhancing user understanding of organizational initiatives, utilizing Next.js.',
         'Reviewed and debugged Next.js code authored by webmasters, managing Git workflows for clean merges and stable deployments.'
+      ]
+    },
+    {
+      id: 2,
+      position: 'Undergraduate Teaching Assistant',
+      company: 'HKUST Computer Science Department',
+      location: 'Hong Kong',
+      period: 'Jan 2025 - Present',
+      description: '',
+      responsibilities: [
+        'Provided guidance on C++ syntax and programming logic to 510 students in the Programming with C++ course, while assisting them in comprehending core computer science concepts, including pointers, dynamic memory allocation, object-oriented programming, and data structures.'
       ]
     },
     {
