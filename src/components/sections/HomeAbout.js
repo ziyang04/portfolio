@@ -32,7 +32,7 @@ const HomeAbout = () => {
             {/* Introduction paragraph */}
             <div className="introduction-container">
               <p className="introduction-text">
-                <span className="intro-first-line">I'm an incoming penultimate-year Computer Science student at HKUST. </span>
+                <span className="intro-first-line">I am a penultimate-year Computer Science student at HKUST. </span>
                 <span className="intro-extended-content">
                   Over the past two years, I have gained substantial experience, currently serving as a Full-Stack AI Engineer intern while also completing two previous internships where I contributed to diverse full-stack projects. 
                   I have worked on multiple personal projects that showcase my skills in machine learning, frontend and backend development. 
