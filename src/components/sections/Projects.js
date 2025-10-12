@@ -31,6 +31,17 @@ const Projects = () => {
     },
     {
       id: 3,
+      title: 'Language Model Pretraining',
+      description: 'Baby LLaMA2 Pretraining + Data Pipeline: An end-to-end implementation of a language model, building a data preprocessing pipeline from raw web data and pretraining a 42M-parameter LLaMA2 model from scratch.',
+      image: require('../../assets/img/Pretraining.jpg'), // Use require to reference the image
+      category: 'AI',
+      technologies: ['Machine Learning', 'PyTorch', 'Transformers', 'Python', 'Bash'],
+      liveLink: '',
+      sourceLink: 'https://github.com/ziyang04/LLM_pretraining',
+      fullImage: true // Add this flag for Pretraining image
+    },
+    {
+      id: 4,
       title: 'Property Price Prediction Model',
       description: 'An AI-powered model leveraging the California Housing dataset to predict property prices using advanced regression techniques.',
       image: require('../../assets/img/Property.png'), // Use require to reference the image
@@ -40,7 +51,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/MLP_project'
         },
         {
-      id: 4,
+      id: 5,
       title: 'Image Classification Model',
       description: 'An AI-powered model utilizing convolutional neural networks (CNN) to classify and categorize various objects with an accuracy as high as 70.3%.',
       image: require('../../assets/img/dataset-cover.jpeg'), // Use require to reference the image
@@ -50,7 +61,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/CNN'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Portfolio Website',
       description: 'A personal portfolio showcasing my journey as a junior software engineer, highlighting innovation and design.',
       image: require('../../assets/img/portfolio.png'), 
@@ -60,7 +71,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/portfolio'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Food Catering Website',
       description: 'A web platform streamlining event planning by enabling users to customize menus for large-scale occasions.',
       image: require('../../assets/img/catering.png'), // Use require to reference the image
