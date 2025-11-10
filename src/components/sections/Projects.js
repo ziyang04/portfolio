@@ -42,6 +42,17 @@ const Projects = () => {
     },
     {
       id: 4,
+      title: 'Supervised Fine-Tuning for Small Language Model',
+      description: 'Advanced supervised fine-tuning techniques for small language models, specifically targeting the SmolLM2-135M model with conversation-aware training strategies. Implemented sophisticated SFT methodologies to enhance model performance through targeted dataset curation and conversation-aware fine-tuning approaches.',
+      image: require('../../assets/img/SFT.png'),
+      category: 'AI',
+      technologies: ['Machine Learning', 'PyTorch', 'Python', 'Bash'],
+      liveLink: '',
+      sourceLink: 'https://github.com/ziyang04/Supervised-Fine-Tuning-SFT-for-Language-Models',
+      fullImage: true
+    },
+    {
+      id: 5,
       title: 'Property Price Prediction Model',
       description: 'An AI-powered model leveraging the California Housing dataset to predict property prices using advanced regression techniques.',
       image: require('../../assets/img/Property.png'), // Use require to reference the image
@@ -51,7 +62,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/MLP_project'
         },
         {
-      id: 5,
+      id: 6,
       title: 'Image Classification Model',
       description: 'An AI-powered model utilizing convolutional neural networks (CNN) to classify and categorize various objects with an accuracy as high as 70.3%.',
       image: require('../../assets/img/dataset-cover.jpeg'), // Use require to reference the image
@@ -61,7 +72,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/CNN'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Portfolio Website',
       description: 'A personal portfolio showcasing my journey as a junior software engineer, highlighting innovation and design.',
       image: require('../../assets/img/portfolio.png'), 
@@ -71,7 +82,7 @@ const Projects = () => {
       sourceLink: 'https://github.com/ziyang04/portfolio'
     },
     {
-      id: 7,
+      id: 8,
       title: 'Food Catering Website',
       description: 'A web platform streamlining event planning by enabling users to customize menus for large-scale occasions.',
       image: require('../../assets/img/catering.png'), // Use require to reference the image
