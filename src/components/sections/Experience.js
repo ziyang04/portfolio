@@ -8,7 +8,7 @@ const Experience = () => {
       position: 'Full-Stack AI Engineer Intern',
       company: 'Zonic Tech',
       location: 'Hong Kong',
-      period: 'June 2025 - Present',
+      period: 'June 2025 - Sep 2025',
       description: '',
       responsibilities: [
         'Engineered an AI-powered video editing system that integrates OpenAI’s Large Language Model (LLM) and Retrieval-Augmented Generation with Redis for dynamic data retrieval, leveraging LangChain to create an agentic AI workflow that helps users automate the video editing experience and delivers personalized results, enhancing user efficiency and engagement.',

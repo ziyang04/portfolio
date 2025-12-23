@@ -34,10 +34,10 @@ const HomeAbout = () => {
               <p className="introduction-text">
                 <span className="intro-first-line">I am a penultimate-year Computer Science student at HKUST. </span>
                 <span className="intro-extended-content">
-                  Over the past two years, I have gained substantial experience, currently serving as a Full-Stack AI Engineer intern while also completing two previous internships where I contributed to diverse full-stack projects. 
-                  I have worked on multiple personal projects that showcase my skills in machine learning, frontend and backend development. 
-                  My academic performance places me in the top 1% of undergraduates, with a GPA of 3.96. 
-                  Beyond academics, I actively participate in extracurricular activities that strengthen my leadership and collaborative skills. 
+                  Over the past 2.5 years, I have completed 3 internships and held additional roles as Lead Webmaster of HKMSA and a two-semester C++ Teaching Assistant.
+                  In addition, I have developed multiple personal projects demonstrating my skills in machine learning, frontend, and backend development. 
+                  Academically, I rank in the top 1% of undergraduates with a GPA of 4.003. 
+                  Currently, I am actively developing new projects with the goal of creating meaningful, real-world impact for people.
                 </span>
               </p>
             </div>

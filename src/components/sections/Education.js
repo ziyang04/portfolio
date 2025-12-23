@@ -87,12 +87,15 @@ const Education = () => {
       period: 'Sep 2023 – June 2027',
       description: 'First Class Honours (Expected)',
       highlights: [
-        'CGPA: 3.961/4.3 | 4x Dean\'s List',
+        'CGPA: 4.003/4.3 | 5x Dean\'s List',
         'HKUST Full Scholarship Admission Holder'
       ],
       courses: [
+        'COMP5621 Computer Networks',
         'COMP3711 Design and Analysis of Algorithms',
+        'COMP3511 Operating Systems',
         'COMP3311 Database Management Systems',
+        'COMP3111 Software Engineering',
         'COMP2012 Object Oriented Programming & Data Structures',
         'COMP2611 Computer Organization',
         'COMP2211 Exploring Artificial Intelligence',
