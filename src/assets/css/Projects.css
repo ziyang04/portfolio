@@ -109,6 +109,20 @@
   margin-bottom: 1rem;
 }
 
+/* Inline link styling for collaborator links in descriptions */
+.project-info .inline-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.project-info .inline-link:hover {
+  color: var(--accent-hover, #0056b3);
+  border-bottom: 1px solid var(--accent-hover, #0056b3);
+}
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
