@@ -4,7 +4,7 @@ import '../../assets/css/Skills.css';
 const Skills = () => {
   // Technical skills categorized
   const frontendSkills = [
-    'React', 'Bootstrap', 'Jquery', 'JavaScript', 'TypeScript', 'HTML', 'CSS'
+    'NextJS', 'React', 'Bootstrap', 'Jquery', 'JavaScript', 'TypeScript', 'HTML', 'CSS'
   ];
 
   const backendSkills = [

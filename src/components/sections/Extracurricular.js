@@ -20,7 +20,7 @@ const Extracurricular = () => {
       position: 'Undergraduate Teaching Assistant',
       company: 'HKUST Computer Science Department',
       location: 'Hong Kong',
-      period: 'Jan 2025 - Dec 2025',
+      period: 'Jan 2025 - Present',
       description: '',
       responsibilities: [
         'Provided guidance on C++ syntax and programming logic to 510 students in the Programming with C++ course, while assisting them in comprehending core computer science concepts, including pointers, dynamic memory allocation, object-oriented programming, and data structures.'
