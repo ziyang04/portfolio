@@ -1,0 +1,7 @@
+fastapi>=0.111
+uvicorn[standard]>=0.30
+pydantic>=2.7
+python-dotenv>=1.0
+# The Claude Agent SDK. The service auto-falls back to MOCK mode if this (or an
+# API key) is missing, so it's safe to install lazily.
+claude-agent-sdk>=0.1.0
