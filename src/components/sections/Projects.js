@@ -102,9 +102,9 @@ const Projects = () => {
     },
     {
       id: 9,
-      title: 'MatesMarket (HKUST Online Marketplace)',
+      title: 'MatesMarket',
       description: 'An online marketplace built for the HKUST community, developed and deployed from the ground up with a modular Flask backend on Azure that follows the Model-View-Controller (MVC) design pattern for maintainability. Pitched and presented to university officials, securing their support and endorsement for the initiative.',
-      role: 'Founder & Lead Backend Engineer',
+      image: require('../../assets/img/matesmarket.png'),
       category: 'Web',
       technologies: ['Flask', 'Microsoft Azure', 'REST API', 'MVC', 'Python'],
       liveLink: 'https://www.matesmarket.online',
