@@ -87,7 +87,7 @@ const Education = () => {
       period: 'Sep 2023 – June 2027',
       description: 'First Class Honours (Expected)',
       highlights: [
-        'CGPA: 4.003/4.3 | 5x Dean\'s List',
+        'CGPA: 4.002/4.3 | Top 1% of HKUST Undergraduates | 6x Dean\'s List',
         'HKUST Full Scholarship Admission Holder'
       ],
       courses: [

@@ -8,16 +8,31 @@ const Experience = () => {
       position: 'Full-Stack AI Engineer Intern',
       company: 'Zonic Tech',
       location: 'Hong Kong',
-      period: 'June 2025 - Sep 2025',
+      period: 'June 2026 - Present',
       description: '',
       responsibilities: [
-        'Engineered an AI-powered video editing system that integrates OpenAI’s Large Language Model (LLM) and Retrieval-Augmented Generation with Redis for dynamic data retrieval, leveraging LangChain to create an agentic AI workflow that helps users automate the video editing experience and delivers personalized results, enhancing user efficiency and engagement.',
-        'Partnered with the CEO to deliver an engaging pitch to potential enterprise clients and investors, showcasing the company’s groundbreaking video understanding model and its innovative applications in AI video editing, resulting in enthusiastic feedback.',
-        'Optimised the parameters passed to PySceneDetect’s detect function, achieving a 56% increase in scene detection accuracy.',
-        'Built a custom AI state management system using nested React context architecture to replace Vercel’s AI SDK RSC in company’s codebase, resulting in approximately 60% faster client-side updates due to eliminating heavy server-side processing.']
+        'Owned the entire architectural migration of the AI agent from Vercel and video-analysis from Azure into independent, containerized Google Cloud Run services orchestrated via GCP Pub/Sub and Eventarc, consolidating a fragmented multi-cloud architecture onto Google Cloud Platform, eliminating serverless timeouts and greatly reducing infrastructure cost.',
+        'Built the company’s video-editing AI agent on the Claude Agent SDK, engineering the skill library and custom tool suite that let it semantically search and retrieve analyzed footage information from Upstash Vector and Redis, then create edits autonomously.',
+        'Scaled agent execution onto Cloud Run Jobs, extending max runtime by 45x to support our clients to process long-form footage.',
+        'Secured interest from prospective clients and investors by pitching at an exhibition, receiving positive feedback and trial requests.'
+      ]
     },
     {
       id: 2,
+      position: 'AI Engineer Intern',
+      company: 'Zonic Tech',
+      location: 'Hong Kong',
+      period: 'June 2025 - Sep 2025',
+      description: '',
+      responsibilities: [
+        'Engineered an AI-powered video editing system that integrates OpenAI’s Large Language Model (LLM) and Retrieval-Augmented Generation with Upstash Vector and Redis for dynamic data retrieval, leveraging LangChain to create an agentic AI workflow that helps users automate the video editing experience and deliver personalized results, enhancing user efficiency and engagement.',
+        'Partnered with the CEO to deliver an engaging pitch to potential enterprise clients and investors, showcasing the company’s groundbreaking video understanding model and its innovative applications in AI video editing, resulting in enthusiastic feedback.',
+        'Optimised the parameters passed to PySceneDetect’s detect function, achieving a 56% increase in scene detection accuracy.',
+        'Built a custom AI state management system using nested React context architecture to replace Vercel’s AI SDK RSC in the company’s codebase, achieving approximately 60% faster client-side updates by shifting state handling to the client-side.'
+      ]
+    },
+    {
+      id: 3,
       position: 'Analyst Programmer Intern',
       company: 'Comptify Analytics',
       location: 'Hong Kong',
@@ -29,7 +44,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       position: 'Frontend Developer Intern',
       company: 'Zonic Tech',
       location: 'Hong Kong',

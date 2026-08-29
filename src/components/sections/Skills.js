@@ -24,7 +24,7 @@ const Skills = () => {
   ];
 
   // Developer tools
-  const devTools = ['Firebase', 'Supabase', 'Postman API', 'Git', 'Azure'];
+  const devTools = ['Firebase', 'Supabase', 'Google Cloud Platform', 'Microsoft Azure', 'Postman API', 'Git'];
   
   // Interests
   const interests = ['Badminton', 'Music'];

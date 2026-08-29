@@ -102,6 +102,16 @@ const Projects = () => {
     },
     {
       id: 9,
+      title: 'MatesMarket (HKUST Online Marketplace)',
+      description: 'An online marketplace built for the HKUST community, developed and deployed from the ground up with a modular Flask backend on Azure that follows the Model-View-Controller (MVC) design pattern for maintainability. Pitched and presented to university officials, securing their support and endorsement for the initiative.',
+      role: 'Founder & Lead Backend Engineer',
+      category: 'Web',
+      technologies: ['Flask', 'Microsoft Azure', 'REST API', 'MVC', 'Python'],
+      liveLink: 'https://www.matesmarket.online',
+      sourceLink: ''
+    },
+    {
+      id: 10,
       title: 'Food Catering Website',
       description: 'A web platform streamlining event planning by enabling users to customize menus for large-scale occasions.',
       image: require('../../assets/img/catering.png'), // Use require to reference the image
@@ -151,8 +161,14 @@ const Projects = () => {
           {filteredProjects.map((project) => (
             <div className="project-card" key={project.id}>
               <div className="project-image">
-                {/* Display the actual project image */}
-                <img src={project.image} alt={project.title} className={project.fullImage ? 'full-image' : ''} />
+                {/* Display the actual project image, or a placeholder if none is set yet */}
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className={project.fullImage ? 'full-image' : ''} />
+                ) : (
+                  <div className="project-image-placeholder">
+                    <span>{project.title}</span>
+                  </div>
+                )}
                 <div className="project-overlay">
                   <div className="project-links">
                     {project.sourceLink && (

@@ -5,6 +5,18 @@ const Extracurricular = () => {
   const extracurriculars = [
     {
       id: 1,
+      position: 'Technical Lead',
+      company: 'Morgan Stanley Code To Give Hackathon',
+      location: 'Hong Kong',
+      period: 'Aug 2025',
+      description: '',
+      responsibilities: [
+        'Led a 6-developer team to build a digitised learning hub for children, parents, and teachers using React, Flask, and PostgreSQL.',
+        'Engineered a real-time chat system using React and Supabase to facilitate instant advice-sharing for a community of parents.'
+      ]
+    },
+    {
+      id: 2,
       position: 'Lead Webmaster',
       company: 'Hong Kong Malaysian Student Association',
       location: 'Hong Kong',
@@ -16,7 +28,7 @@ const Extracurricular = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       position: 'Undergraduate Teaching Assistant',
       company: 'HKUST Computer Science Department',
       location: 'Hong Kong',
@@ -27,7 +39,7 @@ const Extracurricular = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       position: 'Internal Vice President',
       company: 'HKUST Southeast Asia Student Association',
       location: 'Hong Kong',
