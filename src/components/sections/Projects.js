@@ -6,6 +6,17 @@ const Projects = () => {
   
   const projects = [
     {
+      id: 9,
+      title: 'MatesMarket (HKUST online marketplace)',
+      description: 'Engineered a HKUST-exclusive second-hand trading platform using Next.js, TypeScript, Firebase, and TanStack Query, growing to over 150 users within one month of launch. Pitched and presented the application to university officials, securing their support and endorsement for the initiative.',
+      role: 'Co-Founder & Full-Stack Developer',
+      image: require('../../assets/img/matesmarket.png'),
+      category: 'Web',
+      technologies: ['Next.js', 'TypeScript', 'Firebase', 'TanStack Query'],
+      liveLink: 'https://www.matesmarket.online',
+      sourceLink: ''
+    },
+    {
       id: 1,
       title: 'All-in-One Digitized Learning Hub for Children, Parents, and Teachers',
       description: 'An interactive platform that facilitates learning for children, connects parents with each other and teachers through live chat, and serves as a centralized hub for teachers to manage homework. Featuring an AI-powered homework manager, it enhances collaboration and streamlines the educational experience for all users.',
@@ -99,16 +110,6 @@ const Projects = () => {
       technologies: ['React', 'Bootstrap', 'JavaScript', 'HTML', 'CSS'],
       liveLink: 'https://portfolio-5smz8x7qt-zi-yangs-projects-80f09863.vercel.app',
       sourceLink: 'https://github.com/ziyang04/portfolio'
-    },
-    {
-      id: 9,
-      title: 'MatesMarket',
-      description: 'An online marketplace built for the HKUST community, developed and deployed from the ground up with a modular Flask backend on Azure that follows the Model-View-Controller (MVC) design pattern for maintainability. Pitched and presented to university officials, securing their support and endorsement for the initiative.',
-      image: require('../../assets/img/matesmarket.png'),
-      category: 'Web',
-      technologies: ['Flask', 'Microsoft Azure', 'REST API', 'MVC', 'Python'],
-      liveLink: 'https://www.matesmarket.online',
-      sourceLink: ''
     },
     {
       id: 10,
