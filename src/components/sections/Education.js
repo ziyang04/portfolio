@@ -3,7 +3,7 @@ import '../../assets/css/Education.css';
 
 const Education = () => {
   const [expandedModulesIndex, setExpandedModulesIndex] = useState(null);
-  
+
   // Toggle modules dropdown for specific education item
   const toggleModules = (index) => {
     if (expandedModulesIndex === index) {
@@ -12,12 +12,12 @@ const Education = () => {
       setExpandedModulesIndex(index);
     }
   };
-  
+
   // Process highlights to split items with pipe characters into separate list items
   // and format them with proper structure
   const processHighlights = (highlights) => {
     const processedHighlights = [];
-    
+
     highlights.forEach(highlight => {
       // Check if the highlight contains pipe characters
       if (highlight.includes('|')) {
@@ -33,47 +33,47 @@ const Education = () => {
         }
       }
     });
-    
+
     return processedHighlights;
   };
-  
+
   // Format a highlight by adding structure to it
   const formatHighlight = (highlight) => {
     // Format GPA/CGPA entries
     if (highlight.startsWith('CGPA:')) {
       return <><strong>CGPA:</strong> {highlight.substring(5).trim()}</>;
     }
-    
+
     // Format awards
     if (highlight.startsWith('Awards:')) {
       return <><strong>Awards:</strong> {highlight.substring(7).trim()}</>;
     }
-    
+
     // Format Top entries
     if (highlight.startsWith('Top')) {
       return <><strong>Achievement:</strong> {highlight}</>;
     }
-    
+
     // Format Dean's List
     if (highlight.includes('Dean\'s List')) {
       return <><strong>Recognition:</strong> {highlight}</>;
     }
-    
+
     // Format scholarship info
     if (highlight.includes('Scholarship')) {
       return <><strong>Scholarship:</strong> {highlight}</>;
     }
-    
+
     // Format A-Level subjects
     if (highlight.includes('(A*)') || highlight.includes('(A)')) {
       return <><strong>A-Level Results:</strong> {highlight}</>;
     }
-    
+
     // Format ranked entries
     if (highlight.includes('Ranked')) {
       return <><strong>Class Ranking:</strong> {highlight}</>;
     }
-    
+
     // Return the highlight as is if no special formatting applies
     return highlight;
   };
@@ -92,6 +92,9 @@ const Education = () => {
       ],
       courses: [
         'COMP5621 Computer Networks',
+        'COMP4651 Cloud Computing and Big Data Systems',
+        'COMP4332 Big Data Mining and Management',
+        'COMP4211 Machine Learning',
         'COMP3711 Design and Analysis of Algorithms',
         'COMP3511 Operating Systems',
         'COMP3311 Database Management Systems',
@@ -122,65 +125,73 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="education-section py-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center mb-5">
-            <h2 className="section-title">Education</h2>
-            <div className="section-divider"></div>
-          </div>
-        </div>
+    <section id="education" className="section education-section">
+      <div className="shell">
+        <header className="section-head">
+          <p className="eyebrow">Education</p>
+          <h2 className="section-title">Academic Background</h2>
+        </header>
 
-        <div className="education-timeline">
+        <div className="education-list">
           {educationItems.map((edu, index) => (
-            <div className="education-item" key={index}>
-              <div className="education-icon">
+            <article className="card entry-card" key={index}>
+              <div className="entry-icon" aria-hidden="true">
                 <i className="fas fa-graduation-cap"></i>
               </div>
-              <div className="education-content">
-                <div className="education-header">
-                  <h3 className="degree">{edu.degree}</h3>
-                  <div className="institution">{edu.institution}</div>
-                  <div className="d-flex justify-content-center">
-                    <span className="period me-3">{edu.period}</span>
-                    <span className="location">{edu.location}</span>
+
+              <div className="entry-main">
+                <div className="entry-head">
+                  <h3 className="entry-title">{edu.degree}</h3>
+                  <div className="meta">
+                    <span>{edu.period}</span>
+                    <span className="meta-dot" aria-hidden="true"></span>
+                    <span>{edu.location}</span>
                   </div>
                 </div>
-                <div className="education-body">
-                  {edu.description && (
-                    <p className="education-description">{edu.description}</p>
-                  )}
-                  <ul className="highlights">
-                    {processHighlights(edu.highlights).map((highlight, idx) => (
-                      <li key={idx}>{highlight}</li>
-                    ))}
-                    
-                    {edu.courses.length > 0 && (
-                      <li>
-                        <div className="modules-dropdown-header" onClick={() => toggleModules(index)} 
-                             style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}>
-                          <strong style={{ textAlign: 'center' }}>Relevant Courses:</strong>
-                          <span className={`dropdown-arrow ${expandedModulesIndex === index ? 'expanded' : ''}`}
-                                style={{ position: 'absolute', right: 10 }}>
-                            <i className={`fas fa-chevron-${expandedModulesIndex === index ? 'up' : 'down'}`}></i>
+
+                <div className="entry-subtitle">{edu.institution}</div>
+
+                {edu.description && (
+                  <span className="chip chip-accent education-badge">{edu.description}</span>
+                )}
+
+                <ul className="bullets education-highlights">
+                  {processHighlights(edu.highlights).map((highlight, idx) => (
+                    <li key={idx}>{highlight}</li>
+                  ))}
+                </ul>
+
+                {edu.courses.length > 0 && (
+                  <div className="modules">
+                    <button
+                      type="button"
+                      className="modules-trigger"
+                      onClick={() => toggleModules(index)}
+                      aria-expanded={expandedModulesIndex === index}
+                    >
+                      <span>Relevant Courses</span>
+                      <span className="modules-count">{edu.courses.length}</span>
+                      <i
+                        className={`fas fa-chevron-down modules-chevron ${
+                          expandedModulesIndex === index ? 'is-open' : ''
+                        }`}
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+
+                    {expandedModulesIndex === index && (
+                      <div className="modules-grid">
+                        {edu.courses.map((course, idx) => (
+                          <span className="chip module-item" key={idx}>
+                            {course}
                           </span>
-                        </div>
-                        
-                        {expandedModulesIndex === index && (
-                          <div className="modules-grid">
-                            {edu.courses.map((course, idx) => (
-                              <div key={idx} className="module-item">
-                                <span className="module-name">{course}</span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </li>
+                        ))}
+                      </div>
                     )}
-                  </ul>
-                </div>
+                  </div>
+                )}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

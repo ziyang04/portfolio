@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Competitions
+   Card layout comes from the shared .entry-card primitives in App.css.
+   ========================================================================== */
+
+.competitions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.competitions-highlights {
+  margin-top: var(--gap);
+}
+
+.competitions-highlights li {
+  max-width: 78ch;
+}

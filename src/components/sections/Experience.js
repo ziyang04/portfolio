@@ -58,39 +58,37 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="experience-section py-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center mb-5">
-            <h2 className="section-title">Work Experience</h2>
-            <div className="section-divider"></div>
-          </div>
-        </div>
+    <section id="experience" className="section experience-section">
+      <div className="shell">
+        <header className="section-head">
+          <p className="eyebrow">Experience</p>
+          <h2 className="section-title">Work Experience</h2>
+        </header>
 
-        <div className="vertical-timeline">
+        <div className="timeline">
           {experiences.map((exp) => (
-            <div className="experience-item" key={exp.id}>
-              <div className="experience-content">
-                <div className="experience-header">
-                  <h3 className="job-title">{exp.position}</h3>
-                  <span className="company">{exp.company}</span>
-                  <div className="d-flex justify-content-center">
-                    <span className="period me-3">{exp.period}</span>
-                    <span className="location">{exp.location}</span>
-                  </div>
-                </div>
-                <div className="experience-body">
-                  {exp.description && <p>{exp.description}</p>}
-                  {exp.responsibilities.length > 0 && (
-                    <ul className="responsibilities">
-                      {exp.responsibilities.map((responsibility, index) => (
-                        <li key={index}>{responsibility}</li>
-                      ))}
-                    </ul>
-                  )}
+            <article className="timeline-item" key={exp.id}>
+              <div className="timeline-head">
+                <h3 className="timeline-role">{exp.position}</h3>
+                <div className="meta">
+                  <span>{exp.period}</span>
+                  <span className="meta-dot" aria-hidden="true"></span>
+                  <span>{exp.location}</span>
                 </div>
               </div>
-            </div>
+
+              <span className="timeline-org">{exp.company}</span>
+
+              {exp.description && <p className="prose">{exp.description}</p>}
+
+              {exp.responsibilities.length > 0 && (
+                <ul className="bullets">
+                  {exp.responsibilities.map((responsibility, index) => (
+                    <li key={index}>{responsibility}</li>
+                  ))}
+                </ul>
+              )}
+            </article>
           ))}
         </div>
       </div>

@@ -4,18 +4,6 @@ import '../../assets/css/Extracurricular.css';
 const Extracurricular = () => {
   const extracurriculars = [
     {
-      id: 1,
-      position: 'Technical Lead',
-      company: 'Morgan Stanley Code To Give Hackathon',
-      location: 'Hong Kong',
-      period: 'Aug 2025',
-      description: '',
-      responsibilities: [
-        'Led a 6-developer team to build a digitised learning hub for children, parents, and teachers using React, Flask, and PostgreSQL.',
-        'Engineered a real-time chat system using React and Supabase to facilitate instant advice-sharing for a community of parents.'
-      ]
-    },
-    {
       id: 2,
       position: 'Lead Webmaster',
       company: 'Hong Kong Malaysian Student Association',
@@ -53,39 +41,37 @@ const Extracurricular = () => {
   ];
 
   return (
-    <section id="extracurricular" className="extracurricular-section py-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center mb-5">
-            <h2 className="section-title">Extra-Curricular Activities</h2>
-            <div className="section-divider"></div>
-          </div>
-        </div>
+    <section id="extracurricular" className="section extracurricular-section">
+      <div className="shell">
+        <header className="section-head">
+          <p className="eyebrow">Leadership</p>
+          <h2 className="section-title">Extra-Curricular Activities</h2>
+        </header>
 
-        <div className="vertical-timeline">
+        <div className="timeline">
           {extracurriculars.map((activity) => (
-            <div className="extracurricular-item" key={activity.id}>
-              <div className="extracurricular-content">
-                <div className="extracurricular-header">
-                  <h3 className="role-title">{activity.position}</h3>
-                  <span className="organization">{activity.company}</span>
-                  <div className="d-flex justify-content-center">
-                    <span className="period me-3">{activity.period}</span>
-                    <span className="location">{activity.location}</span>
-                  </div>
-                </div>
-                <div className="extracurricular-body">
-                  {activity.description && <p>{activity.description}</p>}
-                  {activity.responsibilities.length > 0 && (
-                    <ul className="responsibilities">
-                      {activity.responsibilities.map((responsibility, index) => (
-                        <li key={index}>{responsibility}</li>
-                      ))}
-                    </ul>
-                  )}
+            <article className="timeline-item" key={activity.id}>
+              <div className="timeline-head">
+                <h3 className="timeline-role">{activity.position}</h3>
+                <div className="meta">
+                  <span>{activity.period}</span>
+                  <span className="meta-dot" aria-hidden="true"></span>
+                  <span>{activity.location}</span>
                 </div>
               </div>
-            </div>
+
+              <span className="timeline-org">{activity.company}</span>
+
+              {activity.description && <p className="prose">{activity.description}</p>}
+
+              {activity.responsibilities.length > 0 && (
+                <ul className="bullets">
+                  {activity.responsibilities.map((responsibility, index) => (
+                    <li key={index}>{responsibility}</li>
+                  ))}
+                </ul>
+              )}
+            </article>
           ))}
         </div>
       </div>

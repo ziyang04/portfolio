@@ -10,7 +10,7 @@ const Skills = () => {
   const backendSkills = [
     'Flask', '.NET', 'Python', 'C#', 'C++'
   ];
-  
+
   const databaseSkills = [
     'MySQL', 'SQLite', 'PostgreSQL', 'FireStore', 'SQL', 'NoSQL'
   ];
@@ -25,104 +25,64 @@ const Skills = () => {
 
   // Developer tools
   const devTools = ['Firebase', 'Supabase', 'Google Cloud Platform', 'Microsoft Azure', 'Postman API', 'Git'];
-  
+
   // Interests
   const interests = ['Badminton', 'Music'];
 
+  // Groups rendered as a definition list: label on the left, chips on the right
+  const skillGroups = [
+    { label: 'Frontend', items: frontendSkills },
+    { label: 'Backend', items: backendSkills },
+    { label: 'Database', items: databaseSkills },
+    { label: 'Developer Tools', items: devTools },
+  ];
+
   return (
-    <section id="skills" className="skills-section py-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center mb-5">
-            <h2 className="section-title">Skills</h2>
-            <div className="section-divider"></div>
-          </div>
-        </div>
+    <section id="skills" className="section skills-section">
+      <div className="shell">
+        <header className="section-head">
+          <p className="eyebrow">Skills</p>
+          <h2 className="section-title">Tools & Technologies</h2>
+        </header>
 
-        {/* Frontend Skills */}
-        <div className="row justify-content-center mb-4">
-          <div className="col-lg-12">
-            <h3 className="skills-subsection-title text-center mb-3">Frontend</h3>
-            <div className="skills-line-container">
-              {frontendSkills.map((skill, index) => (
-                <div className="skill-button" key={index}>
-                  {skill}
-                </div>
-              ))}
+        <dl className="skill-groups">
+          {skillGroups.map((group) => (
+            <div className="skill-group" key={group.label}>
+              <dt className="skill-label">{group.label}</dt>
+              <dd className="skill-items">
+                {group.items.map((skill, index) => (
+                  <span className="chip" key={index}>
+                    {skill}
+                  </span>
+                ))}
+              </dd>
             </div>
-          </div>
-        </div>
+          ))}
 
-        {/* Backend Skills */}
-        <div className="row justify-content-center mb-4">
-          <div className="col-lg-12">
-            <h3 className="skills-subsection-title text-center mb-3">Backend</h3>
-            <div className="skills-line-container">
-              {backendSkills.map((skill, index) => (
-                <div className="skill-button" key={index}>
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Database Skills */}
-        <div className="row justify-content-center mb-4">
-          <div className="col-lg-12">
-            <h3 className="skills-subsection-title text-center mb-3">Database</h3>
-            <div className="skills-line-container">
-              {databaseSkills.map((skill, index) => (
-                <div className="skill-button" key={index}>
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Developer Tools */}
-        <div className="row justify-content-center mb-4">
-          <div className="col-lg-12">
-            <h3 className="skills-subsection-title text-center mb-3">Developer Tools</h3>
-            <div className="skills-line-container">
-              {devTools.map((tool, index) => (
-                <div className="skill-button" key={index}>
-                  {tool}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        
-        {/* Languages */}
-        <div className="row justify-content-center mb-4">
-          <div className="col-lg-12">
-            <h3 className="skills-subsection-title text-center mb-3">Languages</h3>
-            <div className="skills-line-container">
+          {/* Languages carry a proficiency level alongside the name */}
+          <div className="skill-group" key="Languages">
+            <dt className="skill-label">Languages</dt>
+            <dd className="skill-items">
               {languages.map((lang, index) => (
-                <div className="language-button" key={index}>
-                  <span className="language-name">{lang.name}</span>
+                <span className="chip language-chip" key={index}>
+                  {lang.name}
                   <span className="language-level">{lang.level}</span>
-                </div>
+                </span>
               ))}
-            </div>
+            </dd>
           </div>
-        </div>
-        
-        {/* Interests */}
-        <div className="row justify-content-center mt-4">
-          <div className="col-lg-12">
-            <h3 className="skills-subsection-title text-center mb-3">Interests</h3>
-            <div className="skills-line-container">
+
+          <div className="skill-group" key="Interests">
+            <dt className="skill-label">Interests</dt>
+            <dd className="skill-items">
               {interests.map((interest, index) => (
-                <div className="interest-button" key={index}>
+                <span className="chip" key={index}>
                   {interest}
-                </div>
+                </span>
               ))}
-            </div>
+            </dd>
           </div>
-        </div>
+        </dl>
       </div>
     </section>
   );

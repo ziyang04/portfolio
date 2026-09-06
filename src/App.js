@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // Layout Components
@@ -12,6 +11,7 @@ import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
 import Experience from './components/sections/Experience';
 import Extracurricular from './components/sections/Extracurricular';
+import Competitions from './components/sections/Competitions';
 import Education from './components/sections/Education';
 import Contact from './components/sections/Contact';
 
@@ -20,27 +20,15 @@ function App() {
     <div className="App">
       <Navbar />
       <main>
-        <section id="home">
-          <HomeAbout />
-        </section>
-        <section id="education">
-          <Education />
-        </section>
-        <section id="experience">
-          <Experience />
-        </section>
-        <section id="extracurricular">
-          <Extracurricular />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
+        {/* Each component renders its own <section id="..."> landmark */}
+        <HomeAbout />
+        <Education />
+        <Experience />
+        <Extracurricular />
+        <Competitions />
+        <Projects />
+        <Skills />
+        <Contact />
       </main>
       <Footer />
     </div>

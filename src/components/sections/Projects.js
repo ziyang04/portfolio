@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import '../../assets/css/Projects.css';
 
+// Projects shown before the visitor asks for more
+const VISIBLE_COUNT = 3;
+
 const Projects = () => {
   const [filter, setFilter] = useState('all');
-  
+  const [expanded, setExpanded] = useState(false);
+
   const projects = [
     {
       id: 9,
@@ -128,83 +132,132 @@ const Projects = () => {
 
   const categories = ['all', ...new Set(projects.map(project => project.category))];
   
-  const filteredProjects = filter === 'all' 
-    ? projects 
+  const filteredProjects = filter === 'all'
+    ? projects
     : projects.filter(project => project.category === filter);
 
-  return (
-    <section id="projects" className="projects-section py-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center mb-5">
-            <h2 className="section-title">Projects</h2>
-            <div className="section-divider"></div>
-          </div>
-        </div>
+  // Collapse back down whenever the category changes
+  const selectFilter = (category) => {
+    setFilter(category);
+    setExpanded(false);
+  };
 
-        <div className="row mb-5">
-          <div className="col-lg-12 d-flex justify-content-center">
-            <div className="project-filters">
-              {categories.map((category, index) => (
-                <button 
-                  key={index}
-                  className={`filter-btn ${filter === category ? 'active' : ''}`}
-                  onClick={() => setFilter(category)}
-                >
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </button>
-              ))}
-            </div>
+  const visibleProjects = expanded
+    ? filteredProjects
+    : filteredProjects.slice(0, VISIBLE_COUNT);
+
+  const hiddenCount = filteredProjects.length - VISIBLE_COUNT;
+
+  return (
+    <section id="projects" className="section projects-section">
+      <div className="shell">
+        <header className="section-head projects-head">
+          <div>
+            <p className="eyebrow">Projects</p>
+            <h2 className="section-title">Things I've Built</h2>
           </div>
-        </div>
+
+          {/* Segmented category filter */}
+          <div className="project-filters" role="group" aria-label="Filter projects by category">
+            {categories.map((category, index) => (
+              <button
+                type="button"
+                key={index}
+                className={`filter-btn ${filter === category ? 'is-active' : ''}`}
+                onClick={() => selectFilter(category)}
+                aria-pressed={filter === category}
+              >
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            ))}
+          </div>
+        </header>
 
         <div className="project-grid">
-          {filteredProjects.map((project) => (
-            <div className="project-card" key={project.id}>
-              <div className="project-image">
+          {visibleProjects.map((project) => (
+            <article className="card project-card" key={project.id}>
+              <div className="project-media">
                 {/* Display the actual project image, or a placeholder if none is set yet */}
                 {project.image ? (
-                  <img src={project.image} alt={project.title} className={project.fullImage ? 'full-image' : ''} />
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    className={project.fullImage ? 'is-contained' : ''}
+                  />
                 ) : (
-                  <div className="project-image-placeholder">
+                  <div className="project-media-placeholder">
                     <span>{project.title}</span>
                   </div>
                 )}
-                <div className="project-overlay">
-                  <div className="project-links">
-                    {project.sourceLink && (
-                      <a href={project.sourceLink} className="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">Source Code</a>
-                    )}
-                    {project.liveLink && (
-                      <a
-                          href={project.liveLink}
-                          className="btn btn-sm btn-outline-light"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                      >
-                          Live Demo
-                      </a>
-                  )}</div>
-                </div>
               </div>
-              <div className="project-info">
-                <h4>{project.title}</h4>
-                {project.role && <p className="project-role"><strong>Role:</strong> {project.role}</p>}
-                <p>{project.description}</p>
+
+              <div className="project-body">
+                <h3 className="project-title">{project.title}</h3>
+
+                {project.role && <p className="project-role">{project.role}</p>}
+
+                <p className="project-description">{project.description}</p>
+
                 {project.technologies && project.technologies.length > 0 && (
-                  <div className="technologies-container">
-                    <span className="technologies-label">Technologies I worked with</span>
-                    <div className="project-tech">
-                      {project.technologies.map((tech, index) => (
-                        <span className="tech-tag" key={index}>{tech}</span>
-                      ))}
-                    </div>
+                  <div className="project-tech">
+                    {project.technologies.map((tech, index) => (
+                      <span className="chip" key={index}>
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 )}
               </div>
-            </div>
+
+              {(project.sourceLink || project.liveLink) && (
+                <footer className="project-links">
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                      Live demo
+                    </a>
+                  )}
+                  {project.sourceLink && (
+                    <a
+                      href={project.sourceLink}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fab fa-github" aria-hidden="true"></i>
+                      Source code
+                    </a>
+                  )}
+                </footer>
+              )}
+            </article>
           ))}
         </div>
+
+        {filteredProjects.length > VISIBLE_COUNT && (
+          <div className="projects-more">
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={() => setExpanded((open) => !open)}
+              aria-expanded={expanded}
+            >
+              {expanded ? 'Show less' : `Show ${hiddenCount} more`}
+              <i
+                className={`fas fa-chevron-down projects-more-chevron ${
+                  expanded ? 'is-open' : ''
+                }`}
+                aria-hidden="true"
+              ></i>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
