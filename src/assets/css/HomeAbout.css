@@ -47,23 +47,25 @@
   line-height: 1.02;
 }
 
-.hero-intro {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9375rem;
+/* Opening line carries more weight than the paragraphs that follow */
+.hero-lede {
   margin-top: var(--gap-md);
   max-width: 62ch;
-  font-size: var(--text-base);
-  line-height: 1.8;
-  color: var(--text-muted);
-}
-
-/* Opening paragraph carries more weight than the ones that follow */
-.hero-intro p:first-child {
   font-size: var(--text-lg);
   font-weight: 500;
   line-height: 1.7;
   color: var(--text);
+}
+
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+  margin-top: 0.9375rem;
+  max-width: 62ch;
+  font-size: var(--text-base);
+  line-height: 1.8;
+  color: var(--text-muted);
 }
 
 /* Actions ------------------------------------------------------------------ */
@@ -141,19 +143,47 @@
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: var(--gap-lg);
+    row-gap: 1.25rem;
+    text-align: center;
   }
 
-  /* Portrait leads on narrow screens */
+  /* Flatten the copy wrapper so the portrait can be ordered between the
+     opening line and the remaining paragraphs. */
+  .hero-body {
+    display: contents;
+  }
+
+  .hero-name {
+    order: 1;
+  }
+
+  .hero-lede {
+    order: 2;
+    margin-top: 0;
+    margin-inline: auto;
+  }
+
   .hero-portrait {
-    order: -1;
-    justify-self: start;
-    max-width: 200px;
+    order: 3;
+    justify-self: center;
+    max-width: 220px;
+  }
+
+  .hero-intro {
+    order: 4;
+    margin-top: 0;
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    order: 5;
+    justify-content: center;
+    margin-top: var(--gap-xs);
   }
 
   .portrait-frame {
     aspect-ratio: 1;
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
   }
 }
 
@@ -168,6 +198,7 @@
 
   .hero-socials {
     flex-basis: 100%;
+    justify-content: center;
     margin-left: 0;
     margin-top: var(--gap-xs);
     padding-left: 0;

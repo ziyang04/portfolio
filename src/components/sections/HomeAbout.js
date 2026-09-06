@@ -16,12 +16,14 @@ const HomeAbout = () => {
         <div className="hero-body">
           <h1 className="hero-name">PANG, Zi Yang</h1>
 
+          {/* Opening line — sits above the portrait on mobile */}
+          <p className="hero-lede">
+            I am a Final Year Computer Science student at HKUST. Academically, I rank in the top 1%
+            of undergraduates with a GPA of 4.002/4.3.
+          </p>
+
           {/* Introduction */}
           <div className="hero-intro">
-            <p>
-              I am a Final Year Computer Science student at HKUST. Academically, I rank in the top 1%
-              of undergraduates with a GPA of 4.002/4.3.
-            </p>
             <p>
               Over the past 3 years, I have completed 4 internships, most recently as a Full-Stack AI
               Engineer building agentic systems on Google Cloud Platform, and held additional
