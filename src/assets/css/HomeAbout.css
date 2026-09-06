@@ -175,6 +175,15 @@
     margin-inline: auto;
   }
 
+  /* Headline, portrait and buttons stay centred; body copy is justified.
+     Hyphenation keeps the word spacing from opening up on narrow columns. */
+  .hero-lede,
+  .hero-intro {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
   .hero-actions {
     order: 5;
     justify-content: center;
