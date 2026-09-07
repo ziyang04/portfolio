@@ -31,6 +31,9 @@
     'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas,
     monospace;
+  /* Display face — reserved for the hero name */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman',
+    serif;
 
   --text-xs: 0.75rem;
   --text-sm: 0.8125rem;
@@ -38,7 +41,8 @@
   --text-md: 1rem;
   --text-lg: 1.0625rem;
   --title: clamp(1.75rem, 1.15rem + 2.2vw, 2.5rem);
-  --display: clamp(2.5rem, 1.3rem + 5vw, 4.25rem);
+  /* Tuned for Fraunces 700, which sets heavier than the sans it replaced */
+  --display: clamp(2.75rem, 1.35rem + 5.5vw, 4.75rem);
 
   /* Space */
   --gap-xs: 0.5rem;

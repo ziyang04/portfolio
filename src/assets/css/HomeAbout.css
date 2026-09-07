@@ -41,9 +41,14 @@
 }
 
 .hero-name {
-  font-size: var(--display);
+  font-family: var(--font-display);
+  /* Fraunces is variable: SOFT rounds the terminals and WONK swaps in the
+     wonky (slanted-axis) letterforms — together they are what give the name
+     its character. */
   font-weight: 700;
-  letter-spacing: -0.045em;
+  font-variation-settings: 'SOFT' 60, 'WONK' 1;
+  font-size: var(--display);
+  letter-spacing: -0.025em;
   line-height: 1.02;
 }
 
@@ -175,13 +180,11 @@
     margin-inline: auto;
   }
 
-  /* Headline, portrait and buttons stay centred; body copy is justified.
-     Hyphenation keeps the word spacing from opening up on narrow columns. */
+  /* Headline, portrait and buttons stay centred. The copy sits in a centred
+     column (margin-inline: auto above) but reads left-aligned. */
   .hero-lede,
   .hero-intro {
-    text-align: justify;
-    -webkit-hyphens: auto;
-    hyphens: auto;
+    text-align: left;
   }
 
   .hero-actions {
