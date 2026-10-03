@@ -37,9 +37,14 @@
     </script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
+    <!-- Static copy of the content for scrapers (injected at build time);
+         hidden when JavaScript runs, since React renders the real page -->
+    <style>html.js #static-content { display: none; }</style>
+
     <!-- Apply the saved theme before first paint to avoid a flash -->
     <script>
       (function () {
+        document.documentElement.classList.add('js');
         try {
           var t = localStorage.getItem('theme') || 'dark';
           document.documentElement.setAttribute('data-theme', t);
@@ -62,11 +67,6 @@
     <title>Zi Yang's Portfolio</title>
   </head>
   <body>
-    <noscript>
-      <h1>PANG, Zi Yang</h1>
-      <p>Final-year Computer Science + AI student at HKUST and Full-Stack AI Engineer in Hong Kong.</p>
-      <p>This site needs JavaScript. A plain-text version is at <a href="%PUBLIC_URL%/llms.txt">llms.txt</a>, and the résumé is at <a href="%PUBLIC_URL%/resume.pdf">resume.pdf</a>.</p>
-    </noscript>
     <div id="root"></div>
   </body>
 </html>
