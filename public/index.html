@@ -7,9 +7,34 @@
     <meta name="theme-color" content="#0a0b0d" />
     <meta
       name="description"
-      content="Zi Yang's Personal Portfolio Website"
+      content="Portfolio of PANG Zi Yang, a final-year HKUST Computer Science + AI student and Full-Stack AI Engineer in Hong Kong, featuring experience, projects, and skills."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <!-- Plain-text version of this site for AI crawlers that don't run JavaScript -->
+    <link rel="alternate" type="text/markdown" href="%PUBLIC_URL%/llms.txt" title="llms.txt" />
+
+    <!-- Structured profile data, readable without running JavaScript -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "PANG Zi Yang",
+        "jobTitle": "Full-Stack AI Engineer",
+        "email": "mailto:zypang04@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Hong Kong" },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "The Hong Kong University of Science and Technology"
+        },
+        "worksFor": { "@type": "Organization", "name": "Zonic Tech" },
+        "knowsAbout": ["Artificial Intelligence", "AI Agents", "Machine Learning", "Full-Stack Development", "Google Cloud Platform", "React", "Next.js", "Python"],
+        "sameAs": [
+          "https://github.com/ziyang04",
+          "https://linkedin.com/in/zi-yang-pang/",
+          "https://www.instagram.com/_ziyang04/"
+        ]
+      }
+    </script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <!-- Apply the saved theme before first paint to avoid a flash -->
@@ -37,7 +62,11 @@
     <title>Zi Yang's Portfolio</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <h1>PANG, Zi Yang</h1>
+      <p>Final-year Computer Science + AI student at HKUST and Full-Stack AI Engineer in Hong Kong.</p>
+      <p>This site needs JavaScript. A plain-text version is at <a href="%PUBLIC_URL%/llms.txt">llms.txt</a>, and the résumé is at <a href="%PUBLIC_URL%/resume.pdf">resume.pdf</a>.</p>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>

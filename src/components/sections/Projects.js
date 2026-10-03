@@ -12,7 +12,7 @@ const Projects = () => {
     {
       id: 9,
       title: 'MatesMarket (HKUST online marketplace)',
-      description: 'Engineered a HKUST-exclusive second-hand trading platform using Next.js, TypeScript, Firebase, and TanStack Query, growing to over 150 users within one month of launch. Pitched and presented the application to university officials, securing their support and endorsement for the initiative.',
+      description: 'Engineered a HKUST-exclusive second-hand trading platform using Next.js, TypeScript, Firebase, and TanStack Query, reaching 200 users within the first month of launch. Pitched and presented the application to university officials, securing their support and endorsement for the initiative.',
       role: 'Co-Founder & Full-Stack Developer',
       image: require('../../assets/img/matesmarket.png'),
       category: 'Web',

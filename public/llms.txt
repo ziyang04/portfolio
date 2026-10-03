@@ -1,0 +1,56 @@
+# PANG, Zi Yang
+
+> Final-year Computer Science student at HKUST (BEng Computer Science + Extended Major in Artificial Intelligence), ranked in the top 1% of undergraduates with a CGPA of 4.002/4.3. Full-Stack AI Engineer building agentic systems on Google Cloud Platform. Based in Hong Kong.
+
+Over the past 3 years Zi Yang has completed 4 internships, most recently as a Full-Stack AI Engineer, and held leadership roles as Lead Webmaster of HKMSA and a Teaching Assistant for C++. Zi Yang currently works part-time as a Full-Stack AI Engineer at Zonic Tech, building an AI video editing system for large-scale video production, and is a Teaching Assistant for an AI course.
+
+## Links
+
+- [Résumé (PDF)](/resume.pdf)
+- [GitHub](https://github.com/ziyang04)
+- [LinkedIn](https://linkedin.com/in/zi-yang-pang/)
+- Email: zypang04@gmail.com
+
+## Education
+
+- **The Hong Kong University of Science and Technology (HKUST)**, BEng Computer Science + Extended Major in Artificial Intelligence, Sep 2023 – June 2027. First Class Honours (expected). CGPA 4.002/4.3, top 1% of HKUST undergraduates, 6x Dean's List, HKUST Full Scholarship Admission Holder. Relevant courses: Computer Networks, Cloud Computing and Big Data Systems, Big Data Mining and Management, Machine Learning, Design and Analysis of Algorithms, Operating Systems, Database Management Systems, Software Engineering, Computer Organization, Exploring Artificial Intelligence, Object Oriented Programming & Data Structures, Programming with C++, Applied Statistics, Matrix Algebra, Calculus II, Fundamentals of Business Finance.
+- **Methodist College Kuala Lumpur**, A-Levels, Jan 2022 – June 2023. Computer Science (A*), Further Mathematics (A*), Mathematics (A*), Physics (A*). Top in Malaysia in A-Levels Mathematics; ranked 1st in Computer Science and Mathematics within the cohort.
+
+## Work Experience
+
+- **Full-Stack AI Engineer Intern, Zonic Tech** (Hong Kong, June 2026 – Present): Migrated the AI agent from Vercel and video analysis from Azure into containerized Google Cloud Run services orchestrated via GCP Pub/Sub and Eventarc, consolidating a multi-cloud architecture onto GCP, eliminating serverless timeouts and reducing infrastructure cost. Built the company's video-editing AI agent on the Claude Agent SDK, with a skill library and custom tools for semantic search over analyzed footage in Upstash Vector and Redis. Scaled agent execution onto Cloud Run Jobs, extending max runtime by 45x for long-form footage.
+- **AI Engineer Intern, Zonic Tech** (Hong Kong, June 2025 – Sep 2025): Built an AI-powered video editing system using OpenAI LLMs, retrieval-augmented generation with Upstash Vector and Redis, and LangChain agentic workflows. Improved PySceneDetect scene detection accuracy by 56%. Replaced Vercel's AI SDK RSC with a custom nested React context state system, making client-side updates ~60% faster.
+- **Analyst Programmer Intern, Comptify Analytics** (Hong Kong, June 2024 – Aug 2024): Built a Python SMTP-based email verification tool that identified 60% of invalid addresses in a contact list. Engineered a full-stack director remuneration analytics platform (.NET, MySQL, jQuery, Bootstrap) serving over 1,000 multinational enterprise clients.
+- **Frontend Developer Intern, Zonic Tech** (Hong Kong, Dec 2023 – Jan 2024): Rebuilt the website front end in React with Material UI and Storybook; participated in code reviews.
+
+## Projects
+
+- **MatesMarket** ([live](https://www.matesmarket.online)): Co-Founder & Full-Stack Developer. HKUST-exclusive second-hand marketplace built with Next.js, TypeScript, Firebase, and TanStack Query; reached 200 users within the first month of launch and was endorsed by university officials.
+- **All-in-One Digitized Learning Hub** ([source](https://github.com/ziyang04/Code_to_Give_Project_CARE)): Learning platform for children, parents, and teachers with live chat and an AI-powered homework manager. React, TailwindCSS, Flask, Supabase, PostgreSQL, DeepSeek API.
+- **Campus Food Delivery App**: Backend Engineer. Mobile app where students order food and other students deliver it. Flask, Firebase, Supabase, PostgreSQL, Google Cloud Platform.
+- **AI-powered News Reporter Agent**: LangChain agentic system that researches news, generates a consolidated PDF report, and emails it, turning 45–70 minutes of manual work into 8–13 seconds. Built with Tony Ding.
+- **Language Model Pretraining** ([source](https://github.com/ziyang04/LLM_pretraining)): Data preprocessing pipeline from raw web data and pretraining of a 42M-parameter LLaMA2 model from scratch. PyTorch.
+- **Supervised Fine-Tuning for Small Language Models** ([source](https://github.com/ziyang04/Supervised-Fine-Tuning-SFT-for-Language-Models)): Conversation-aware SFT of SmolLM2-135M. PyTorch.
+- **Property Price Prediction Model** ([source](https://github.com/ziyang04/MLP_project)): Regression on the California Housing dataset. Scikit-learn, Keras, TensorFlow.
+- **Image Classification Model** ([source](https://github.com/ziyang04/CNN)): CNN image classifier reaching 70.3% accuracy. PyTorch.
+- **Portfolio Website** ([source](https://github.com/ziyang04/portfolio)): This site, built with React.
+- **Food Catering Website** ([source](https://github.com/ziyang04/Catering-Website)): Menu customization platform for large events. React.
+
+## Competitions
+
+- **Morgan Stanley Code To Give Hackathon** (Hong Kong, Aug 2025): Led a 6-developer team building a digitized learning hub with React, Flask, and PostgreSQL; built a real-time parent chat with React and Supabase.
+
+## Leadership & Extra-Curricular
+
+- **Undergraduate Teaching Assistant, HKUST Computer Science Department** (Jan 2025 – Present): Supported 510 students in Programming with C++.
+- **Lead Webmaster, Hong Kong Malaysian Student Association** (Jan 2025 – Dec 2025): Led a 5-developer team building the events page in Next.js; reviewed code and managed Git workflows.
+- **Internal Vice President, HKUST Southeast Asia Student Association** (Mar 2024 – Mar 2025): Organized a pre-university arrival program for 60 incoming students; co-led the annual sports day.
+
+## Skills
+
+- Frontend: Next.js, React, Bootstrap, jQuery, JavaScript, TypeScript, HTML, CSS
+- Backend: Flask, .NET, Python, C#, C++
+- Databases: MySQL, SQLite, PostgreSQL, Firestore, SQL, NoSQL
+- Tools & Cloud: Google Cloud Platform, Microsoft Azure, Firebase, Supabase, Postman, Git
+- Languages: English (native), Mandarin, Cantonese, Malay (fluent), Hakka (basic)
+- Interests: Badminton, music
