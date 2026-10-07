@@ -10,8 +10,17 @@
 
 /* Card shell, icon tile and heading block come from .entry-card in App.css. */
 
-.education-badge {
+.education-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
   margin-top: 0.875rem;
+}
+
+/* Long badges (e.g. the FYP title) wrap instead of overflowing the card */
+.education-badges .chip {
+  white-space: normal;
 }
 
 .education-highlights {
@@ -83,3 +92,4 @@
     transform: translateY(0);
   }
 }
+

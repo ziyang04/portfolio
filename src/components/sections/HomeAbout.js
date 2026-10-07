@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../assets/css/HomeAbout.css';
 
 const HomeAbout = () => {
+  // On mobile the longer introduction is collapsed behind a toggle
+  const [introOpen, setIntroOpen] = useState(false);
+
   // Prevent right-click on the profile image
   const preventRightClick = (e) => {
     e.preventDefault();
@@ -16,14 +19,31 @@ const HomeAbout = () => {
         <div className="hero-body">
           <h1 className="hero-name">PANG, Zi Yang</h1>
 
-          {/* Opening line — sits above the portrait on mobile */}
+          {/* Role line — mobile only */}
+          <p className="hero-role">Full-Stack AI Engineer · HKUST CS</p>
+
+          {/* Opening line */}
           <p className="hero-lede">
             I am a Final Year Computer Science student at HKUST. Academically, I rank in the top 1%
             of undergraduates with a GPA of 4.002/4.3.
           </p>
 
-          {/* Introduction */}
-          <div className="hero-intro">
+          {/* Introduction — always shown on desktop, collapsible on mobile */}
+          <button
+            type="button"
+            className="hero-more"
+            onClick={() => setIntroOpen(!introOpen)}
+            aria-expanded={introOpen}
+            aria-controls="hero-intro"
+          >
+            <span>{introOpen ? 'Show less' : 'More about me'}</span>
+            <i
+              className={`fas fa-chevron-down hero-more-chevron ${introOpen ? 'is-open' : ''}`}
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <div id="hero-intro" className={`hero-intro ${introOpen ? 'is-open' : ''}`}>
             <p>
               Over the past 3 years, I have completed 4 internships, most recently as a Full-Stack AI
               Engineer building agentic systems on Google Cloud Platform, and held additional

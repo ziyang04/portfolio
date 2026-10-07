@@ -90,6 +90,7 @@ const Education = () => {
         'CGPA: 4.002/4.3 | Top 1% of HKUST Undergraduates | 6x Dean\'s List',
         'HKUST Full Scholarship Admission Holder'
       ],
+      project: 'Final Year Project: RL-Based Agentic AI System for Low-Touch Trading',
       courses: [
         'COMP5621 Computer Networks',
         'COMP4651 Cloud Computing and Big Data Systems',
@@ -151,8 +152,15 @@ const Education = () => {
 
                 <div className="entry-subtitle">{edu.institution}</div>
 
-                {edu.description && (
-                  <span className="chip chip-accent education-badge">{edu.description}</span>
+                {(edu.description || edu.project) && (
+                  <div className="education-badges">
+                    {edu.description && (
+                      <span className="chip chip-accent">{edu.description}</span>
+                    )}
+                    {edu.project && (
+                      <span className="chip chip-accent">{edu.project}</span>
+                    )}
+                  </div>
                 )}
 
                 <ul className="bullets education-highlights">

@@ -73,6 +73,12 @@
   color: var(--text-muted);
 }
 
+/* Mobile-only role line and intro toggle */
+.hero-role,
+.hero-more {
+  display: none;
+}
+
 /* Actions ------------------------------------------------------------------ */
 
 .hero-actions {
@@ -146,60 +152,112 @@
 /* Responsive --------------------------------------------------------------- */
 
 @media (max-width: 900px) {
+  /* Centred profile card: portrait, name, role, opening line and actions.
+     The longer introduction is collapsed behind a "More about me" toggle. */
+  .hero {
+    padding-top: calc(64px + clamp(2rem, 6vw, 3.5rem));
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
-    row-gap: 1.25rem;
+    gap: 0;
     text-align: center;
   }
 
-  /* Flatten the copy wrapper so the portrait can be ordered between the
-     opening line and the remaining paragraphs. */
+  /* Flatten the copy wrapper so the portrait can be ordered above the name. */
   .hero-body {
     display: contents;
   }
 
-  .hero-name {
-    order: 1;
-  }
-
-  .hero-lede {
-    order: 2;
-    margin-top: 0;
-    margin-inline: auto;
-  }
-
   .hero-portrait {
-    order: 3;
+    order: 1;
     justify-self: center;
     max-width: 220px;
-  }
-
-  .hero-intro {
-    order: 4;
-    margin-top: 0;
-    margin-inline: auto;
-  }
-
-  /* Headline, portrait and buttons stay centred. The copy sits in a centred
-     column (margin-inline: auto above) but reads left-aligned. */
-  .hero-lede,
-  .hero-intro {
-    text-align: left;
-  }
-
-  .hero-actions {
-    order: 5;
-    justify-content: center;
-    margin-top: var(--gap-xs);
   }
 
   .portrait-frame {
     aspect-ratio: 1;
     border-radius: var(--radius-lg);
   }
+
+  .hero-name {
+    order: 2;
+    margin-top: var(--gap-md);
+  }
+
+  .hero-role {
+    order: 3;
+    display: block;
+    margin-top: 0.625rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--accent);
+  }
+
+  .hero-lede {
+    order: 4;
+    margin-top: var(--gap);
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    order: 5;
+    justify-content: center;
+    margin-top: var(--gap-md);
+  }
+
+  .hero-more {
+    order: 6;
+    display: inline-flex;
+    align-items: center;
+    justify-self: center;
+    gap: 0.5rem;
+    margin-top: var(--gap-md);
+    padding: 0.375rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color var(--dur) var(--ease),
+      background-color var(--dur) var(--ease);
+  }
+
+  .hero-more:hover {
+    color: var(--accent);
+    background: var(--surface);
+  }
+
+  .hero-more-chevron {
+    font-size: 0.6875rem;
+    transition: transform var(--dur) var(--ease);
+  }
+
+  .hero-more-chevron.is-open {
+    transform: rotate(180deg);
+  }
+
+  .hero-intro {
+    order: 7;
+    display: none;
+    margin-top: var(--gap);
+    margin-inline: auto;
+    padding-top: var(--gap);
+    border-top: 1px solid var(--border);
+    text-align: left;
+  }
+
+  .hero-intro.is-open {
+    display: flex;
+    animation: hero-intro-in 200ms var(--ease);
+  }
 }
 
 @media (max-width: 560px) {
+  .hero-lede {
+    font-size: var(--text-md);
+    line-height: 1.65;
+  }
+
   .hero-actions {
     gap: var(--gap-xs);
   }
@@ -215,5 +273,16 @@
     margin-top: var(--gap-xs);
     padding-left: 0;
     border-left: none;
+  }
+}
+
+@keyframes hero-intro-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
