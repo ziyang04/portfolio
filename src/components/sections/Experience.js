@@ -7,6 +7,7 @@ const Experience = () => {
       id: 1,
       position: 'Full-Stack AI Engineer Intern',
       company: 'Zonic Tech',
+      website: 'https://zonic.tech',
       location: 'Hong Kong',
       period: 'June 2026 - Present',
       description: '',
@@ -22,6 +23,7 @@ const Experience = () => {
       id: 2,
       position: 'AI Engineer Intern',
       company: 'Zonic Tech',
+      website: 'https://zonic.tech',
       location: 'Hong Kong',
       period: 'June 2025 - Sep 2025',
       description: '',
@@ -48,6 +50,7 @@ const Experience = () => {
       id: 4,
       position: 'Frontend Developer Intern',
       company: 'Zonic Tech',
+      website: 'https://zonic.tech',
       location: 'Hong Kong',
       period: 'Dec 2023 - Jan 2024',
       description: '',
@@ -78,7 +81,15 @@ const Experience = () => {
                 </div>
               </div>
 
-              <span className="timeline-org">{exp.company}</span>
+              <span className="timeline-org">
+                {exp.website ? (
+                  <a href={exp.website} target="_blank" rel="noopener noreferrer" className="inline-link">
+                    {exp.company}
+                  </a>
+                ) : (
+                  exp.company
+                )}
+              </span>
 
               {exp.description && <p className="prose">{exp.description}</p>}
 

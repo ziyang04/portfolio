@@ -2,7 +2,7 @@
 
 > Final-year Computer Science student at HKUST (BEng Computer Science + Extended Major in Artificial Intelligence), ranked in the top 1% of undergraduates with a CGPA of 4.002/4.3. Full-Stack AI Engineer building agentic systems on Google Cloud Platform. Based in Hong Kong.
 
-Over the past 3 years Zi Yang has completed 4 internships, most recently as a Full-Stack AI Engineer, and held leadership roles as Lead Webmaster of HKMSA and a Teaching Assistant for C++. Zi Yang currently works part-time as a Full-Stack AI Engineer at Zonic Tech, building an AI video editing system for large-scale video production, and is a Teaching Assistant for an AI course.
+Over the past 3 years Zi Yang has completed 4 internships, most recently as a Full-Stack AI Engineer, and held leadership roles as Lead Webmaster of HKMSA and a Teaching Assistant for C++. Zi Yang currently works part-time as a Full-Stack AI Engineer at Zonic Tech (https://zonic.tech), building an AI video editing system for large-scale video production, and is a Teaching Assistant for an AI course.
 
 ## Links
 
