@@ -13,6 +13,7 @@ const Experience = () => {
       responsibilities: [
         'Owned the entire architectural migration of the AI agent from Vercel and video-analysis from Azure into independent, containerized Google Cloud Run services orchestrated via GCP Pub/Sub and Eventarc, consolidating a fragmented multi-cloud architecture onto Google Cloud Platform, eliminating serverless timeouts and greatly reducing infrastructure cost.',
         'Built the company’s video-editing AI agent on the Claude Agent SDK, engineering the skill library and custom tool suite that let it semantically search and retrieve analyzed footage information from Upstash Vector and Redis, then create edits autonomously.',
+        'Optimised AI agent invocation latency by ~75% by consolidating Next.js server actions and pipelining Upstash Redis operations.',
         'Scaled agent execution onto Cloud Run Jobs, extending max runtime by 45x to support our clients to process long-form footage.',
         'Secured interest from prospective clients and investors by pitching at an exhibition, receiving positive feedback and trial requests.'
       ]
