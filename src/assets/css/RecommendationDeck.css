@@ -1,0 +1,350 @@
+/* ==========================================================================
+   Recommendation deck — stacked quote cards beside the Experience heading
+   ========================================================================== */
+
+.rec-deck-wrap {
+  /* Room for the back card peeking out to the right */
+  padding-right: 14px;
+  opacity: 0;
+  transform: translateY(16px) rotate(2deg);
+  transition: opacity 500ms var(--ease),
+    transform 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Deals in once the section scrolls into view */
+.rec-deck-wrap.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Every card shares one grid cell, so the deck is as tall as its tallest card */
+.rec-deck {
+  --reveal: 0; /* 0 → 1 as the top card is dragged away */
+  display: grid;
+  border-radius: 20px;
+}
+
+.rec-deck:focus-visible {
+  border-radius: 20px;
+  outline-offset: 8px;
+}
+
+.rec-card {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 520ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 380ms var(--ease);
+}
+
+.rec-card[data-pos='0'] {
+  z-index: 2;
+  transform: rotate(-1.5deg);
+  cursor: grab;
+  /* Horizontal drags move the card; vertical ones still scroll the page */
+  touch-action: pan-y;
+}
+
+.rec-card[data-pos='0']:hover {
+  transform: rotate(0deg) translateY(-3px);
+}
+
+/* The card beneath straightens and brightens as the top one is dragged off */
+.rec-card[data-pos='1'] {
+  z-index: 1;
+  transform: translate(calc(14px * (1 - var(--reveal))), calc(12px * (1 - var(--reveal))))
+    rotate(calc(3deg - 4.5deg * var(--reveal)));
+}
+
+.rec-card[data-pos='1'] > * {
+  opacity: calc(0.25 + 0.75 * var(--reveal));
+  transition: opacity 380ms var(--ease);
+}
+
+.rec-card:not([data-pos='0']):not([data-pos='1']) {
+  opacity: 0;
+}
+
+/* Follow the pointer exactly while dragging */
+.rec-deck.is-dragging .rec-card,
+.rec-deck.is-dragging .rec-card > * {
+  transition: none;
+}
+
+.rec-deck.is-dragging .rec-card[data-pos='0'] {
+  cursor: grabbing;
+}
+
+/* [data-pos] keeps this above the :hover lift while the pointer is still on the card */
+.rec-card.is-flying[data-pos] {
+  z-index: 3;
+  transform: translate(calc(var(--dir) * 130%), -24px) rotate(calc(var(--dir) * 18deg));
+  opacity: 0;
+  transition: transform 380ms var(--ease), opacity 380ms var(--ease);
+}
+
+/* One-off wiggle after the deck deals in, hinting that the card can be dragged */
+.rec-card.is-nudging {
+  animation: rec-nudge 900ms var(--ease);
+}
+
+@keyframes rec-nudge {
+  0%,
+  100% {
+    transform: rotate(-1.5deg);
+  }
+  30% {
+    transform: translateX(32px) rotate(2.5deg);
+  }
+  60% {
+    transform: translateX(-8px) rotate(-2.5deg);
+  }
+}
+
+.rec-mark {
+  height: 2rem;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 0.8;
+  color: var(--accent);
+}
+
+.rec-quote {
+  flex: 1;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: var(--text-lg);
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.rec-hl {
+  font-weight: 650;
+}
+
+.rec-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+}
+
+.rec-more i {
+  font-size: 0.625rem;
+  transition: transform var(--dur) var(--ease);
+}
+
+.rec-more:hover i {
+  transform: translateX(3px);
+}
+
+.rec-from {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.rec-avatar {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.rec-name {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.rec-role {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Dots + Next ------------------------------------------------------------- */
+
+.rec-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.75rem;
+}
+
+.rec-dots {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.rec-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border-strong);
+  transition: width var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+.rec-dots span.is-on {
+  width: 18px;
+  background: var(--accent);
+}
+
+/* Drag hint — doubles as a click fallback for "next" */
+.rec-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.625rem;
+  margin-right: -0.625rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  transition: color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+.rec-hint:hover {
+  color: var(--accent);
+  background: var(--surface);
+}
+
+.rec-hint .fa-arrow-right {
+  font-size: 0.625rem;
+  transition: transform var(--dur) var(--ease);
+}
+
+.rec-hint:hover .fa-arrow-right {
+  transform: translateX(3px);
+}
+
+/* "Swipe" on touch screens, "Drag" with a mouse */
+.rec-hint-touch {
+  display: none;
+}
+
+@media (hover: none) {
+  .rec-hint-mouse {
+    display: none;
+  }
+
+  .rec-hint-touch {
+    display: inline;
+  }
+}
+
+/* Full recommendation dialog ---------------------------------------------- */
+
+.rec-dialog {
+  width: min(620px, calc(100vw - 2rem));
+  max-height: calc(100vh - 3rem);
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+}
+
+.rec-dialog[open] {
+  animation: rec-dialog-in 380ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.rec-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.rec-dialog-head {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.rec-dialog-head .rec-name {
+  font-size: var(--text-lg);
+  letter-spacing: -0.02em;
+}
+
+.rec-dialog-close {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease);
+}
+
+.rec-dialog-close:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+/* The full text reads as one message from the sender above */
+.rec-bubble {
+  margin-left: 3.375rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  border-top-left-radius: 4px;
+  background: var(--surface);
+  font-size: var(--text-base);
+  line-height: 1.75;
+}
+
+.rec-bubble p + p {
+  margin-top: 0.875rem;
+}
+
+@keyframes rec-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .rec-deck-wrap {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 560px) {
+  .rec-bubble {
+    margin-left: 0;
+    border-top-left-radius: var(--radius-lg);
+  }
+}

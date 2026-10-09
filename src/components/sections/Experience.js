@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../assets/css/Experience.css';
+import RecommendationDeck from './RecommendationDeck';
 
 const Experience = () => {
   const experiences = [
@@ -64,10 +65,18 @@ const Experience = () => {
   return (
     <section id="experience" className="section experience-section">
       <div className="shell">
-        <header className="section-head">
-          <p className="eyebrow">Experience</p>
-          <h2 className="section-title">Work Experience</h2>
-        </header>
+        <div className="experience-intro">
+          <header className="section-head">
+            <p className="eyebrow">Experience</p>
+            <h2 className="section-title">Work Experience</h2>
+            <p className="section-lede">
+              Four internships across AI engineering, cloud infrastructure and analytics, and what
+              the people who managed me had to say.
+            </p>
+          </header>
+
+          <RecommendationDeck />
+        </div>
 
         <div className="timeline">
           {experiences.map((exp) => (

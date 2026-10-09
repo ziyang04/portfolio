@@ -3,6 +3,25 @@
    Layout comes from the shared .timeline / .bullets primitives in App.css.
    ========================================================================== */
 
+/* Heading on the left, recommendation deck on the right */
+.experience-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+  align-items: center;
+  gap: 2rem 4rem;
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.experience-intro .section-head {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .experience-intro {
+    grid-template-columns: 1fr;
+  }
+}
+
 .experience-section .timeline-item + .timeline-item {
   padding-top: 0;
 }
