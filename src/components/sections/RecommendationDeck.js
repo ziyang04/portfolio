@@ -245,10 +245,12 @@ const RecommendationDeck = () => {
                 <button
                   type="button"
                   className="rec-more"
-                  // Safari focuses the deck on a button press instead, then restores focus
-                  // there with a ring once the dialog closes; keep focus where it was
-                  onMouseDown={(e) => e.preventDefault()}
-                  onClick={() => setOpenIndex(i)}
+                  onClick={(e) => {
+                    // Safari leaves focus on the deck after a click or drag, and closing the
+                    // dialog restores it there with a ring. Opened by pointer, drop focus first
+                    if (e.detail > 0) document.activeElement?.blur();
+                    setOpenIndex(i);
+                  }}
                 >
                   Read full recommendation
                   <i className="fas fa-arrow-right" aria-hidden="true"></i>
