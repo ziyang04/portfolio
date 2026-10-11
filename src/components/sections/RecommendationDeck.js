@@ -242,7 +242,14 @@ const RecommendationDeck = () => {
               </div>
               <blockquote className="rec-quote">
                 <p>{withHighlight(rec.excerpt, rec.highlight)}</p>
-                <button type="button" className="rec-more" onClick={() => setOpenIndex(i)}>
+                <button
+                  type="button"
+                  className="rec-more"
+                  // Safari focuses the deck on a button press instead, then restores focus
+                  // there with a ring once the dialog closes; keep focus where it was
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => setOpenIndex(i)}
+                >
                   Read full recommendation
                   <i className="fas fa-arrow-right" aria-hidden="true"></i>
                 </button>
