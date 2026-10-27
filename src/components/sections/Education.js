@@ -90,7 +90,7 @@ const Education = () => {
         'CGPA: 4.002/4.3 | Top 1% of HKUST Undergraduates | 6x Dean\'s List',
         'HKUST Full Scholarship Admission Holder'
       ],
-      project: 'Final Year Project: RL-Based Agentic AI System for Low-Touch Trading',
+      project: 'Final Year Project: Self-Improving Multi-Agent System for End-to-End Marketing Automation, from Strategy to Video Generation, Posting and Feedback',
       courses: [
         'COMP5621 Computer Networks',
         'COMP4651 Cloud Computing and Big Data Systems',
